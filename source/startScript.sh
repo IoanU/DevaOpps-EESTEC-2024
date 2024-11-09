@@ -1,25 +1,17 @@
 #!/bin/bash
 
 # Detect environment and set paths dynamically
-if [ -n "$TASK_ENVIRONMENT" ]; then
-    DATAFOLDER="/usr/src/app/DataFolder"
-    INPUTDATA="/usr/src/app/InputData"
-    SOURCE="/usr/src/app/source"
-    OUTPUT="/usr/src/app/output"
-else
-    BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd)"
-    DATAFOLDER="$BASE_DIR/DataFolder"
-    INPUTDATA="$BASE_DIR/InputData"
-    SOURCE="$BASE_DIR/source"
-    OUTPUT="$BASE_DIR/output"
-fi
+DATAFOLDER="/usr/src/app/DataFolder"
+INPUTDATA="/usr/src/app/InputData"
+SOURCE="/usr/src/app/source"
+OUTPUT="/usr/src/app/output"
 
 # Ensure the output directory exists
 mkdir -p "$OUTPUT"
 
 # Step 1: Install packages from DataFolder/packageScript.sh
-echo "Installing packages..."
-$DATAFOLDER/packageScript.sh
+# echo "Installing packages..."
+# $DATAFOLDER/packageScript.sh
 
 # Step 2: Convert PCAP files to JSON in both train and test directories
 echo "Converting PCAP files to JSON format in both train and test directories..."

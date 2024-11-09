@@ -1,7 +1,7 @@
 {
-    "train_dir": "../InputData/train",
-    "test_dir": "../InputData/test",
-    "output_dir": "../output",
-    "model_dir": "./model"
+    "train_dir": "/usr/src/app/InputData/train",
+    "test_dir": "/usr/src/app/InputData/test",
+    "output_dir": "/usr/src/app/output",
+    "model_dir": "/usr/src/app/source/model"
 }
 
