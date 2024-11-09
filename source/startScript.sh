@@ -21,8 +21,8 @@ mkdir -p "$OUTPUT"
 echo "Installing packages..."
 $DATAFOLDER/packageScript.sh
 
-# Step 2: Convert PCAP files to JSON (for both training and test data)
-echo "Converting PCAP files to JSON format..."
+# Step 2: Convert PCAP files to JSON in both train and test directories
+echo "Converting PCAP files to JSON format in both train and test directories..."
 python3 $SOURCE/convert_to_json.py
 
 # Step 3: Run feature extraction on training data
