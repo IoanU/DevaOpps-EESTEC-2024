@@ -35,7 +35,7 @@ for filename in os.listdir(input_folder):
                     with open(json_path, "w") as json_file:
                         json.dump(json_object, json_file, indent=4)
                     
-                    print(f"Payload-ul JSON a fost extras și salvat în '{json_filename}'")
+                    # print(f"Payload-ul JSON a fost extras și salvat în '{json_filename}'")
                     json_extracted = True
                     break
 
@@ -44,6 +44,6 @@ for filename in os.listdir(input_folder):
         
         # Dacă nu s-a găsit JSON valid, afișează un mesaj
         if not json_extracted:
-            print(f"Nu a fost găsit niciun payload JSON valid în '{filename}'")
+            # print(f"Nu a fost găsit niciun payload JSON valid în '{filename}'")
 
 # 'x.pcap' este transformat in 'x.json' si mutat in folderul test.json, nou creat in InputData
