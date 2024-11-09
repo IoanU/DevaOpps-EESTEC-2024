@@ -2,6 +2,14 @@ from utils import load_config, load_json
 import pandas as pd
 import os
 
+def is_utf8(file_path):
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            file.read()
+        return True
+    except UnicodeDecodeError:
+        return False
+
 def extract_features(file_path):
     # Define feature extraction logic here
     data = load_json(file_path)
@@ -27,7 +35,7 @@ def main():
 
     for filename in os.listdir(train_dir):
         file_path = train_dir / filename
-        if file_path.is_file() and filename != "train_features.csv":
+        if file_path.is_file() and is_utf8(file_path) and filename != "train_features.csv":
             features = extract_features(file_path)
             features_list.append(features)
 

@@ -3,6 +3,15 @@ import pandas as pd
 import os
 from joblib import load
 
+def is_utf8(file_path):
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            file.read()
+        return True
+    except UnicodeDecodeError:
+        return False
+
+
 def extract_features(file_path):
     data = load_json(file_path)
     features = {
@@ -31,7 +40,7 @@ def main():
 
     for filename in os.listdir(test_dir):
         file_path = test_dir / filename
-        if file_path.is_file():
+        if file_path.is_file() and is_utf8(file_path) :
             features = extract_features(file_path)
             features_df = pd.DataFrame([features])
             features_encoded = pd.get_dummies(features_df).reindex(columns=feature_columns, fill_value=0)

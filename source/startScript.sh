@@ -6,6 +6,8 @@ INPUTDATA="/usr/src/app/InputData"
 SOURCE="/usr/src/app/source"
 OUTPUT="/usr/src/app/output"
 
+source /usr/src/app/venv/bin/activate
+
 # Ensure the output directory exists
 mkdir -p "$OUTPUT"
 
