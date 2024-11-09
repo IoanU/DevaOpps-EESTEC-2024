@@ -34,3 +34,5 @@ python3 $SOURCE/classify.py
 # Step 6: Move the generated labels.json to the output directory with correct filename
 
 echo "Pipeline completed successfully."
+
+deactivate
