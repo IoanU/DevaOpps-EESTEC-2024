@@ -1,0 +1,49 @@
+{
+    "process": {
+        "name": "python.exe",
+        "executable": "C:\\Users\\LAB Administrator\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+    },
+    "file": {
+        "path": "C:\\Users\\LAB Administrator\\PycharmProjects\\pythonProject\\.venv\\Lib\\site-packages\\pip\\_vendor\\rich\\_win32_console.py",
+        "extension": "py",
+        "name": "_win32_console.py",
+        "directory": "C:\\Users\\LAB Administrator\\PycharmProjects\\pythonProject\\.venv\\Lib\\site-packages\\pip\\_vendor\\rich"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "event_data": {
+            "User": "MELD\\LAB Administrator"
+        },
+        "opcode": "Info",
+        "version": 2,
+        "task": "File created (rule: FileCreate)",
+        "event_id": "11",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "event": {
+        "code": "11",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "File created (rule: FileCreate)",
+        "category": [
+            "file"
+        ],
+        "type": [
+            "creation"
+        ]
+    },
+    "message": "File created:\nRuleName: -\nProcessGuid: {074624d0-d95e-66cd-2506-000000000700}\nProcessId: 1276\nImage: C:\\Users\\LAB Administrator\\AppData\\Local\\Programs\\Python\\Python312\\python.exe\nTargetFilename: C:\\Users\\LAB Administrator\\PycharmProjects\\pythonProject\\.venv\\Lib\\site-packages\\pip\\_vendor\\rich\\_win32_console.py\nUser: MELD\\LAB Administrator\n",
+    "label": 0
+}

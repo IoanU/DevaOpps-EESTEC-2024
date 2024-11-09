@@ -1,0 +1,49 @@
+{
+    "process": {
+        "name": "msiexec.exe",
+        "executable": "C:\\Windows\\system32\\msiexec.exe"
+    },
+    "file": {
+        "path": "C:\\Users\\LAB Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\test\\test_list.py",
+        "extension": "py",
+        "name": "test_list.py",
+        "directory": "C:\\Users\\LAB Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\test"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "event_data": {
+            "User": "NT AUTHORITY\\SYSTEM"
+        },
+        "opcode": "Info",
+        "version": 2,
+        "task": "File created (rule: FileCreate)",
+        "event_id": "11",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "event": {
+        "code": "11",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "File created (rule: FileCreate)",
+        "type": [
+            "creation"
+        ],
+        "category": [
+            "file"
+        ]
+    },
+    "message": "File created:\nRuleName: -\nProcessGuid: {074624d0-d93a-66cd-ff05-000000000700}\nProcessId: 556\nImage: C:\\Windows\\system32\\msiexec.exe\nTargetFilename: C:\\Users\\LAB Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\test\\test_list.py\nUser: NT AUTHORITY\\SYSTEM\n",
+    "label": 0
+}

@@ -1,0 +1,112 @@
+{
+    "process": {
+        "args": [
+            "c:\\windows\\syswow64\\\\windowspowershell\\v1.0\\powershell.exe",
+            "-NoLogo",
+            "-NoProfile",
+            "-Noninteractive",
+            "-ExecutionPolicy",
+            "Unrestricted",
+            "-InputFormat",
+            "None",
+            "-Command",
+            "&",
+            "C:\\ProgramData\\Microsoft\\VisualStudio\\Packages\\AndroidPlatformMAUI,version=1.0.4\\AndroidSDKPrivateInstall.ps1",
+            "-Package",
+            "android-33",
+            "-FileName",
+            "platform-33-ext3_r03.zip",
+            "-Version",
+            "3.0.0",
+            "-AndroidHome",
+            "C:\\Program Files (x86)\\Android\\android-sdk",
+            "-RequestedAVDs",
+            "\"",
+            "-Operation",
+            "Install;",
+            "exit",
+            "$LastExitCode"
+        ],
+        "args_count": 25,
+        "title": "ConsoleHost",
+        "command_line": "c:\\windows\\syswow64\\\\windowspowershell\\v1.0\\powershell.exe -NoLogo -NoProfile -Noninteractive -ExecutionPolicy Unrestricted -InputFormat None -Command & \"C:\\ProgramData\\Microsoft\\VisualStudio\\Packages\\AndroidPlatformMAUI,version=1.0.4\\AndroidSDKPrivateInstall.ps1\" -Package android-33 -FileName platform-33-ext3_r03.zip -Version 3.0.0 -AndroidHome \"C:\\Program Files (x86)\\Android\\android-sdk\" -RequestedAVDs \"\"\" -Operation Install; exit $LastExitCode"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-PowerShell/Operational",
+        "opcode": "To be used when operation is just executing a method",
+        "version": 1,
+        "task": "Executing Pipeline",
+        "event_id": "4103",
+        "provider_guid": "{a0c1853b-5c40-4b15-8766-3cf1c58f985a}",
+        "activity_id": "{1f208f94-3491-0000-05d2-dfd187f8da01}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-PowerShell",
+        "user": {
+            "identifier": "S-1-5-21-981878584-487602356-1169203714-500",
+            "domain": "MELD",
+            "name": "LAB Administrator",
+            "type": "User"
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "message": "CommandInvocation(Test-Path): \"Test-Path\"\nParameterBinding(Test-Path): name=\"Path\"; value=\"C:\\Program Files (x86)\\Android\\android-sdk\\tn4ta\\android-13\\data\\res\\drawable-hdpi\"\n\n\nContext:\n        Severity = Informational\n        Host Name = ConsoleHost\n        Host Version = 5.1.19041.4648\n        Host ID = 9bf87baf-3ecd-4095-b948-983b1044fcd2\n        Host Application = c:\\windows\\syswow64\\\\windowspowershell\\v1.0\\powershell.exe -NoLogo -NoProfile -Noninteractive -ExecutionPolicy Unrestricted -InputFormat None -Command & \"C:\\ProgramData\\Microsoft\\VisualStudio\\Packages\\AndroidPlatformMAUI,version=1.0.4\\AndroidSDKPrivateInstall.ps1\" -Package android-33 -FileName platform-33-ext3_r03.zip -Version 3.0.0 -AndroidHome \"C:\\Program Files (x86)\\Android\\android-sdk\" -RequestedAVDs \"\"\" -Operation Install; exit $LastExitCode\n        Engine Version = 5.1.19041.4648\n        Runspace ID = 3f3d7785-8927-4dac-9810-96c612dfcaa4\n        Pipeline ID = 1\n        Command Name = Test-Path\n        Command Type = Cmdlet\n        Script Name = C:\\ProgramData\\Microsoft\\VisualStudio\\Packages\\AndroidPlatformMAUI,version=1.0.4\\AndroidSDKPrivateInstall.ps1\n        Command Path = \n        Sequence Number = 18540\n        User = MELD\\LAB Administrator\n        Connected User = \n        Shell ID = Microsoft.PowerShell\n\n\nUser Data:\n",
+    "file": {
+        "path": "C:\\ProgramData\\Microsoft\\VisualStudio\\Packages\\AndroidPlatformMAUI,version=1.0.4\\AndroidSDKPrivateInstall.ps1",
+        "extension": "ps1",
+        "name": "AndroidSDKPrivateInstall.ps1",
+        "directory": "C:\\ProgramData\\Microsoft\\VisualStudio\\Packages\\AndroidPlatformMAUI,version=1.0.4"
+    },
+    "related": {
+        "user": "LAB Administrator"
+    },
+    "powershell": {
+        "process": {
+            "executable_version": "5.1.19041.4648"
+        },
+        "engine": {
+            "version": "5.1.19041.4648"
+        },
+        "runspace_id": "3f3d7785-8927-4dac-9810-96c612dfcaa4",
+        "pipeline_id": "1",
+        "id": "Microsoft.PowerShell",
+        "command": {
+            "invocation_details": [
+                {
+                    "related_command": "Test-Path",
+                    "type": "CommandInvocation",
+                    "value": "\"Test-Path\""
+                },
+                {
+                    "related_command": "Test-Path",
+                    "name": "\"Path\"",
+                    "type": "ParameterBinding",
+                    "value": "\"C:\\Program Files (x86)\\Android\\android-sdk\\tn4ta\\android-13\\data\\res\\drawable-hdpi\""
+                }
+            ],
+            "name": "Test-Path",
+            "type": "Cmdlet"
+        }
+    },
+    "event": {
+        "sequence": 18540,
+        "code": "4103",
+        "provider": "Microsoft-Windows-PowerShell",
+        "kind": "event",
+        "module": "powershell",
+        "action": "Executing Pipeline",
+        "category": [
+            "process"
+        ],
+        "type": [
+            "info"
+        ]
+    },
+    "user": {
+        "domain": "MELD",
+        "name": "LAB Administrator",
+        "id": "S-1-5-21-981878584-487602356-1169203714-500"
+    },
+    "label": 0
+}

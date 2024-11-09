@@ -1,0 +1,52 @@
+{
+    "process": {
+        "name": "lsass.exe",
+        "executable": "C:\\Windows\\system32\\lsass.exe"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "event_data": {
+            "User": "NT AUTHORITY\\SYSTEM"
+        },
+        "opcode": "Info",
+        "version": 2,
+        "event_id": "11",
+        "task": "File created (rule: FileCreate)",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "rule": {
+        "name": "technique_id=T1574.010,technique_name=Services File Permissions Weakness"
+    },
+    "message": "File created:\nRuleName: technique_id=T1574.010,technique_name=Services File Permissions Weakness\nProcessGuid: {d7942c09-2593-66b2-0c00-000000000600}\nProcessId: 756\nImage: C:\\Windows\\system32\\lsass.exe\nTargetFilename: C:\\Windows\\System32\\config\\netlogon.ftl\nUser: NT AUTHORITY\\SYSTEM\n",
+    "file": {
+        "path": "C:\\Windows\\System32\\config\\netlogon.ftl",
+        "extension": "ftl",
+        "name": "netlogon.ftl",
+        "directory": "C:\\Windows\\System32\\config"
+    },
+    "event": {
+        "code": "11",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "File created (rule: FileCreate)",
+        "type": [
+            "creation"
+        ],
+        "category": [
+            "file"
+        ]
+    },
+    "label": 1
+}

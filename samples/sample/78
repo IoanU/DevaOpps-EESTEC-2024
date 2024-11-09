@@ -1,0 +1,56 @@
+{
+    "registry": {
+        "hive": "HKLM",
+        "path": "HKLM\\System\\CurrentControlSet\\Services\\VMnetuserif\\Tag",
+        "value": "Tag",
+        "key": "System\\CurrentControlSet\\Services\\VMnetuserif\\Tag"
+    },
+    "process": {
+        "name": "services.exe",
+        "executable": "C:\\Windows\\system32\\services.exe"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "event_data": {
+            "Details": "DWORD (0x0000000d)",
+            "User": "NT AUTHORITY\\SYSTEM",
+            "EventType": "SetValue",
+            "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\VMnetuserif\\Tag"
+        },
+        "opcode": "Info",
+        "version": 2,
+        "event_id": "13",
+        "task": "Registry value set (rule: RegistryEvent)",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "rule": {
+        "name": "technique_id=T1543,technique_name=Service Creation"
+    },
+    "message": "Registry value set:\nRuleName: technique_id=T1543,technique_name=Service Creation\nEventType: SetValue\nProcessGuid: {c6555c30-c5ff-66cd-0b00-000000000600}\nProcessId: 760\nImage: C:\\Windows\\system32\\services.exe\nTargetObject: HKLM\\System\\CurrentControlSet\\Services\\VMnetuserif\\Tag\nDetails: DWORD (0x0000000d)\nUser: NT AUTHORITY\\SYSTEM\n",
+    "event": {
+        "code": "13",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "Registry value set (rule: RegistryEvent)",
+        "type": [
+            "change"
+        ],
+        "category": [
+            "configuration",
+            "registry"
+        ]
+    },
+    "label": 0
+}

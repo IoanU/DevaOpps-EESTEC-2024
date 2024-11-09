@@ -1,0 +1,81 @@
+{
+    "process": {
+        "args": [
+            "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe",
+            "-StartupEvent",
+            "2d8",
+            "-InterruptEvent",
+            "0",
+            "-NGENProcess",
+            "394",
+            "-Pipe",
+            "408",
+            "-Comment",
+            "NGen Worker Process"
+        ],
+        "parent": {
+            "name": "ngen.exe",
+            "executable": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe"
+        },
+        "name": "mscorsvw.exe",
+        "executable": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe",
+        "command_line": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2d8 -InterruptEvent 0 -NGENProcess 394 -Pipe 408 -Comment \"NGen Worker Process\""
+    },
+    "winlog": {
+        "keywords": [
+            "Audit Success"
+        ],
+        "logon": {
+            "id": "0x3e7"
+        },
+        "channel": "Security",
+        "event_data": {
+            "MandatoryLabel": "S-1-16-16384",
+            "TargetLogonId": "0x0",
+            "CommandLine": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2d8 -InterruptEvent 0 -NGENProcess 394 -Pipe 408 -Comment \"NGen Worker Process\"",
+            "SubjectUserName": "ws2$",
+            "TokenElevationType": "%%1936",
+            "SubjectDomainName": "MELD",
+            "TargetUserName": "-",
+            "SubjectLogonId": "0x3e7",
+            "ProcessId": "0x1a50",
+            "TargetDomainName": "-",
+            "SubjectUserSid": "S-1-5-18",
+            "TargetUserSid": "S-1-0-0"
+        },
+        "opcode": "Info",
+        "version": 2,
+        "event_id": "4688",
+        "task": "Process Creation",
+        "provider_guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Security-Auditing"
+    },
+    "log": {
+        "level": "information"
+    },
+    "message": "A new process has been created.\n\nCreator Subject:\n\tSecurity ID:\t\tS-1-5-18\n\tAccount Name:\t\tws2$\n\tAccount Domain:\t\tMELD\n\tLogon ID:\t\t0x3E7\n\nTarget Subject:\n\tSecurity ID:\t\tS-1-0-0\n\tAccount Name:\t\t-\n\tAccount Domain:\t\t-\n\tLogon ID:\t\t0x0\n\nProcess Information:\n\tNew Process ID:\t\t0x1ce8\n\tNew Process Name:\tC:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe\n\tToken Elevation Type:\t%%1936\n\tMandatory Label:\t\tS-1-16-16384\n\tCreator Process ID:\t0x1a50\n\tCreator Process Name:\tC:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ngen.exe\n\tProcess Command Line:\tC:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\mscorsvw.exe -StartupEvent 2d8 -InterruptEvent 0 -NGENProcess 394 -Pipe 408 -Comment \"NGen Worker Process\"\n\nToken Elevation Type indicates the type of token that was assigned to the new process in accordance with User Account Control policy.\n\nType 1 is a full token with no privileges removed or groups disabled.  A full token is only used if User Account Control is disabled or if the user is the built-in Administrator account or a service account.\n\nType 2 is an elevated token with no privileges removed or groups disabled.  An elevated token is used when User Account Control is enabled and the user chooses to start the program using Run as administrator.  An elevated token is also used when an application is configured to always require administrative privilege or to always require maximum privilege, and the user is a member of the Administrators group.\n\nType 3 is a limited token with administrative privileges removed and administrative groups disabled.  The limited token is used when User Account Control is enabled, the application does not require administrative privilege, and the user does not choose to start the program using Run as administrator.\n",
+    "related": {
+        "user": "ws2$"
+    },
+    "event": {
+        "code": "4688",
+        "provider": "Microsoft-Windows-Security-Auditing",
+        "kind": "event",
+        "module": "security",
+        "action": "created-process",
+        "category": [
+            "process"
+        ],
+        "type": [
+            "start"
+        ],
+        "outcome": "success"
+    },
+    "user": {
+        "domain": "MELD",
+        "name": "ws2$",
+        "id": "S-1-5-18"
+    },
+    "label": 0
+}

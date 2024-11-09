@@ -1,0 +1,48 @@
+{
+    "process": {
+        "name": "Explorer.EXE",
+        "executable": "C:\\Windows\\Explorer.EXE"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "event_data": {
+            "User": "MELD\\LAB Administrator"
+        },
+        "opcode": "Info",
+        "version": 2,
+        "event_id": "11",
+        "task": "File created (rule: FileCreate)",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "file": {
+        "path": "C:\\Users\\LAB Administrator\\Desktop\\mimikatz-master\\debian\\compat",
+        "name": "compat",
+        "directory": "C:\\Users\\LAB Administrator\\Desktop\\mimikatz-master\\debian"
+    },
+    "log": {
+        "level": "information"
+    },
+    "event": {
+        "code": "11",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "File created (rule: FileCreate)",
+        "category": [
+            "file"
+        ],
+        "type": [
+            "creation"
+        ]
+    },
+    "message": "File created:\nRuleName: -\nProcessGuid: {c6555c30-97cb-66b0-7801-000000000700}\nProcessId: 8168\nImage: C:\\Windows\\Explorer.EXE\nTargetFilename: C:\\Users\\LAB Administrator\\Desktop\\mimikatz-master\\debian\\compat\nUser: MELD\\LAB Administrator\n",
+    "label": 1
+}

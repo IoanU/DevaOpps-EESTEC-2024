@@ -1,0 +1,47 @@
+{
+    "winlog": {
+        "keywords": [
+            "Audit Success"
+        ],
+        "channel": "Security",
+        "event_data": {
+            "Action": "%%16391",
+            "UserName": "NT AUTHORITY\\LOCAL SERVICE",
+            "LayerName": "Inbound Transport v6 Discard Layer",
+            "FilterId": "70572",
+            "FilterKey": "{f0c3a92c-a464-410b-9b17-33c267bb3aba}",
+            "Conditions": "\n\tCondition ID:\t{632ce23b-5167-435c-86d7-e903684aa80c}\n\tMatch value:\tNo flags set\n\tCondition value:\t0x00000003\n\n\tCondition ID:\t{ab3033c9-c0e3-4759-937d-5758c65d4ae3}\n\tMatch value:\tEqual to\n\tCondition value:\t0x00000003",
+            "Weight": "18446744073709551615",
+            "UserSid": "S-1-5-19",
+            "ProviderName": "Microsoft Corporation",
+            "FilterType": "%%16388",
+            "LayerId": "15",
+            "ProviderKey": "{decc16ca-3f33-4346-be1e-8fb4ae0f3d62}",
+            "CalloutName": "WFP Built-in Silent Drop Transport v6 Discard Layer Callout",
+            "ChangeType": "%%16384",
+            "CalloutKey": "{8693cc74-a075-4156-b476-9286eece814e}",
+            "LayerKey": "{2a6ff955-3b2b-49d2-9848-ad9d72dcaab7}",
+            "ProcessId": "1620",
+            "FilterName": "Port Scanning Prevention Filter"
+        },
+        "opcode": "Info",
+        "task": "Other Policy Change Events",
+        "event_id": "5447",
+        "provider_guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+        "activity_id": "{15dd0033-e1bb-0000-f8a2-0d22dbe7da01}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Security-Auditing"
+    },
+    "log": {
+        "level": "information"
+    },
+    "message": "A Windows Filtering Platform filter has been changed.\n\t\nSubject:\n\tSecurity ID:\t\tS-1-5-19\n\tAccount Name:\t\tNT AUTHORITY\\LOCAL SERVICE\n\nProcess Information:\n\tProcess ID:\t1620\n\nProvider Information:\n\tID:\t\t{decc16ca-3f33-4346-be1e-8fb4ae0f3d62}\n\tName:\t\tMicrosoft Corporation\n\nChange Information:\n\tChange Type:\tAdd\n\nFilter Information:\n\tID:\t\t{f0c3a92c-a464-410b-9b17-33c267bb3aba}\n\tName:\t\tPort Scanning Prevention Filter\n\tType:\t\tNot persistent\n\tRun-Time ID:\t70572\n\nLayer Information:\n\tID:\t\t{2a6ff955-3b2b-49d2-9848-ad9d72dcaab7}\n\tName:\t\tInbound Transport v6 Discard Layer\n\tRun-Time ID:\t15\n\nCallout Information:\n\tID:\t\t{8693cc74-a075-4156-b476-9286eece814e}\n\tName:\t\tWFP Built-in Silent Drop Transport v6 Discard Layer Callout\n\nAdditional Information:\n\tWeight:\t18446744073709551615\t\n\tConditions:\t\n\tCondition ID:\t{632ce23b-5167-435c-86d7-e903684aa80c}\n\tMatch value:\tNo flags set\n\tCondition value:\t0x00000003\n\n\tCondition ID:\t{ab3033c9-c0e3-4759-937d-5758c65d4ae3}\n\tMatch value:\tEqual to\n\tCondition value:\t0x00000003\n\n\tFilter Action:\tCallout\n",
+    "event": {
+        "code": "5447",
+        "provider": "Microsoft-Windows-Security-Auditing",
+        "kind": "event",
+        "action": "Other Policy Change Events",
+        "outcome": "success"
+    },
+    "label": 0
+}

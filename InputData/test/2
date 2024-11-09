@@ -1,0 +1,78 @@
+{
+    "process": {
+        "name": "OneDriveSetup.exe",
+        "executable": "C:\\Users\\LAB Administrator\\AppData\\Local\\Microsoft\\OneDrive\\Update\\OneDriveSetup.exe",
+        "hash": {
+            "sha1": "180cee30200d24267537b1c0fe57f7cd42b16f8b",
+            "sha256": "40b9c655cb9c833542f32dee9d7191fa054de957b2aeacc6a63392875ffea70d",
+            "md5": "1778c327803df69fb3a585d992170773"
+        }
+    },
+    "winlog": {
+        "event_id": "23",
+        "task": "File Delete archived (rule: FileDelete)",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "opcode": "Info",
+        "version": 5,
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "sysmon": {
+        "file": {
+            "archived": true,
+            "is_executable": true
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "rule": {
+        "name": "Executables"
+    },
+    "message": "File Delete archived:\nRuleName: Executables\nProcessGuid: {b1b2c0c2-80af-6697-c202-000000000600}\nProcessId: 9636\nUser: MELD\\LAB Administrator\nImage: C:\\Users\\LAB Administrator\\AppData\\Local\\Microsoft\\OneDrive\\Update\\OneDriveSetup.exe\nTargetFilename: C:\\Users\\LAB Administrator\\AppData\\Local\\Microsoft\\OneDrive\\19.043.0304.0013\\api-ms-win-core-profile-l1-1-0.dll\nHashes: SHA1=180CEE30200D24267537B1C0FE57F7CD42B16F8B,MD5=1778C327803DF69FB3A585D992170773,SHA256=40B9C655CB9C833542F32DEE9D7191FA054DE957B2AEACC6A63392875FFEA70D,IMPHASH=00000000000000000000000000000000\nIsExecutable: true\nArchived: true\n",
+    "file": {
+        "path": "C:\\Users\\LAB Administrator\\AppData\\Local\\Microsoft\\OneDrive\\19.043.0304.0013\\api-ms-win-core-profile-l1-1-0.dll",
+        "extension": "dll",
+        "name": "api-ms-win-core-profile-l1-1-0.dll",
+        "directory": "C:\\Users\\LAB Administrator\\AppData\\Local\\Microsoft\\OneDrive\\19.043.0304.0013"
+    },
+    "related": {
+        "user": "LAB Administrator",
+        "hash": [
+            "180cee30200d24267537b1c0fe57f7cd42b16f8b",
+            "1778c327803df69fb3a585d992170773",
+            "40b9c655cb9c833542f32dee9d7191fa054de957b2aeacc6a63392875ffea70d"
+        ]
+    },
+    "event": {
+        "code": "23",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "File Delete archived (rule: FileDelete)",
+        "type": [
+            "deletion"
+        ],
+        "category": [
+            "file"
+        ]
+    },
+    "user": {
+        "domain": "MELD",
+        "name": "LAB Administrator",
+        "id": "S-1-5-18"
+    },
+    "hash": {
+        "sha1": "180cee30200d24267537b1c0fe57f7cd42b16f8b",
+        "sha256": "40b9c655cb9c833542f32dee9d7191fa054de957b2aeacc6a63392875ffea70d",
+        "md5": "1778c327803df69fb3a585d992170773"
+    },
+    "label": 1
+}

@@ -1,0 +1,47 @@
+{
+    "winlog": {
+        "keywords": [
+            "Audit Success"
+        ],
+        "channel": "Security",
+        "event_data": {
+            "Action": "%%16391",
+            "UserName": "NT AUTHORITY\\LOCAL SERVICE",
+            "LayerName": "ALE Listen v6 Layer",
+            "FilterId": "72642",
+            "Weight": "10376293541461622976",
+            "FilterKey": "{cad61230-dd35-422b-bb29-be92b9f4d0e4}",
+            "Conditions": "\n\tCondition ID:\t{71bc78fa-f17c-4997-a602-6abb261f351c}\n\tMatch value:\tEqual to\n\tCondition value:\t-\n\n\tCondition ID:\t{af043a0a-b34d-4f86-979c-c90371af6e66}\n\tMatch value:\tEqual to\n\tCondition value:\t\nO:SYG:SYD:(A;;CCRC;;;S-1-5-21-981878584-487602356-1169203714-500)(A;;CCRC;;;AC)(A;;CCRC;;;S-1-15-3-1)(A;;CCRC;;;S-1-15-3-2)(A;;CCRC;;;S-1-15-3-3)(A;;CCRC;;;S-1-15-3-4214768333-1334025770-122408079-3919188833)",
+            "UserSid": "S-1-5-19",
+            "ProviderName": "@bfe.dll,-1211",
+            "FilterType": "%%16388",
+            "ProviderKey": "{decc16ca-3f33-4346-be1e-8fb4ae0f3d62}",
+            "LayerId": "42",
+            "CalloutName": "WFP Built-in Edge Traversal ALE Listen v6 Layer Callout",
+            "ChangeType": "%%16384",
+            "CalloutKey": "{81a434e7-f60c-4378-bab8-c625a30f0197}",
+            "LayerKey": "{7ac9de24-17dd-4814-b4bd-a9fbc95a321b}",
+            "ProcessId": "1800",
+            "FilterName": "Microsoft Store"
+        },
+        "opcode": "Info",
+        "event_id": "5447",
+        "task": "Other Policy Change Events",
+        "provider_guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+        "activity_id": "{458d2c95-badf-0000-5de0-b165d6e7da01}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Security-Auditing"
+    },
+    "log": {
+        "level": "information"
+    },
+    "message": "A Windows Filtering Platform filter has been changed.\n\t\nSubject:\n\tSecurity ID:\t\tS-1-5-19\n\tAccount Name:\t\tNT AUTHORITY\\LOCAL SERVICE\n\nProcess Information:\n\tProcess ID:\t1800\n\nProvider Information:\n\tID:\t\t{decc16ca-3f33-4346-be1e-8fb4ae0f3d62}\n\tName:\t\t@bfe.dll,-1211\n\nChange Information:\n\tChange Type:\tAdd\n\nFilter Information:\n\tID:\t\t{cad61230-dd35-422b-bb29-be92b9f4d0e4}\n\tName:\t\tMicrosoft Store\n\tType:\t\tNot persistent\n\tRun-Time ID:\t72642\n\nLayer Information:\n\tID:\t\t{7ac9de24-17dd-4814-b4bd-a9fbc95a321b}\n\tName:\t\tALE Listen v6 Layer\n\tRun-Time ID:\t42\n\nCallout Information:\n\tID:\t\t{81a434e7-f60c-4378-bab8-c625a30f0197}\n\tName:\t\tWFP Built-in Edge Traversal ALE Listen v6 Layer Callout\n\nAdditional Information:\n\tWeight:\t10376293541461622976\t\n\tConditions:\t\n\tCondition ID:\t{71bc78fa-f17c-4997-a602-6abb261f351c}\n\tMatch value:\tEqual to\n\tCondition value:\t-\n\n\tCondition ID:\t{af043a0a-b34d-4f86-979c-c90371af6e66}\n\tMatch value:\tEqual to\n\tCondition value:\t\nO:SYG:SYD:(A;;CCRC;;;S-1-5-21-981878584-487602356-1169203714-500)(A;;CCRC;;;AC)(A;;CCRC;;;S-1-15-3-1)(A;;CCRC;;;S-1-15-3-2)(A;;CCRC;;;S-1-15-3-3)(A;;CCRC;;;S-1-15-3-4214768333-1334025770-122408079-3919188833)\n\n\n\tFilter Action:\tCallout\n",
+    "event": {
+        "code": "5447",
+        "provider": "Microsoft-Windows-Security-Auditing",
+        "kind": "event",
+        "action": "Other Policy Change Events",
+        "outcome": "success"
+    },
+    "label": 0
+}

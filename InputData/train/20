@@ -1,0 +1,47 @@
+{
+    "winlog": {
+        "keywords": [
+            "Audit Success"
+        ],
+        "channel": "Security",
+        "event_data": {
+            "Action": "%%16389",
+            "UserName": "NT AUTHORITY\\LOCAL SERVICE",
+            "LayerName": "Inbound ICMP Error v6 Layer",
+            "FilterId": "72719",
+            "Conditions": "-",
+            "Weight": "3458764513820540928",
+            "FilterKey": "{1391d8f3-0a4c-43e7-85f6-262f900e2e2f}",
+            "UserSid": "S-1-5-19",
+            "ProviderName": "@bfe.dll,-1211",
+            "FilterType": "%%16388",
+            "LayerId": "30",
+            "ProviderKey": "{decc16ca-3f33-4346-be1e-8fb4ae0f3d62}",
+            "CalloutName": "-",
+            "ChangeType": "%%16385",
+            "CalloutKey": "{00000000-0000-0000-0000-000000000000}",
+            "LayerKey": "{65f9bdff-3b2d-4e5d-b8c6-c720651fe898}",
+            "ProcessId": "1800",
+            "FilterName": "Query User"
+        },
+        "opcode": "Info",
+        "event_id": "5447",
+        "task": "Other Policy Change Events",
+        "provider_guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+        "activity_id": "{458d2c95-badf-0000-5de0-b165d6e7da01}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Security-Auditing"
+    },
+    "log": {
+        "level": "information"
+    },
+    "event": {
+        "code": "5447",
+        "provider": "Microsoft-Windows-Security-Auditing",
+        "kind": "event",
+        "action": "Other Policy Change Events",
+        "outcome": "success"
+    },
+    "message": "A Windows Filtering Platform filter has been changed.\n\t\nSubject:\n\tSecurity ID:\t\tS-1-5-19\n\tAccount Name:\t\tNT AUTHORITY\\LOCAL SERVICE\n\nProcess Information:\n\tProcess ID:\t1800\n\nProvider Information:\n\tID:\t\t{decc16ca-3f33-4346-be1e-8fb4ae0f3d62}\n\tName:\t\t@bfe.dll,-1211\n\nChange Information:\n\tChange Type:\tDelete\n\nFilter Information:\n\tID:\t\t{1391d8f3-0a4c-43e7-85f6-262f900e2e2f}\n\tName:\t\tQuery User\n\tType:\t\tNot persistent\n\tRun-Time ID:\t72719\n\nLayer Information:\n\tID:\t\t{65f9bdff-3b2d-4e5d-b8c6-c720651fe898}\n\tName:\t\tInbound ICMP Error v6 Layer\n\tRun-Time ID:\t30\n\nCallout Information:\n\tID:\t\t{00000000-0000-0000-0000-000000000000}\n\tName:\t\t-\n\nAdditional Information:\n\tWeight:\t3458764513820540928\t\n\tConditions:\t-\n\tFilter Action:\tBlock\n",
+    "label": 0
+}

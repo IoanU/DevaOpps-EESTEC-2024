@@ -1,0 +1,47 @@
+{
+    "winlog": {
+        "keywords": [
+            "Audit Success"
+        ],
+        "channel": "Security",
+        "event_data": {
+            "Action": "%%16390",
+            "UserName": "NT AUTHORITY\\LOCAL SERVICE",
+            "LayerName": "ALE Receive/Accept v6 Layer",
+            "FilterId": "72367",
+            "Conditions": "\n\tCondition ID:\t{71bc78fa-f17c-4997-a602-6abb261f351c}\n\tMatch value:\tEqual to\n\tCondition value:\t-\n\n\tCondition ID:\t{af043a0a-b34d-4f86-979c-c90371af6e66}\n\tMatch value:\tEqual to\n\tCondition value:\t\nO:SYG:SYD:(A;;CCRC;;;LA)(A;;CCRC;;;AC)(A;;CCRC;;;S-1-15-3-1)(A;;CCRC;;;S-1-15-3-2)(A;;CCRC;;;S-1-15-3-3)(A;;CCRC;;;S-1-15-3-4214768333-1334025770-122408079-3919188833)\n\n\n\tCondition ID:\t{97537c6c-d9a3-4767-a381-e942675cd920}\n\tMatch value:\tEqual to\n\tCondition value:\t0x00000083\n\n\tCondition ID:\t{72b1a111-987b-4720-99dd-c7c576fa2d4c}\n\tMatch value:\tEqual to\n\tCondition value:\t0x00000001\n\n\tCondition ID:\t{632ce23b-5167-435c-86d7-e903684aa80c}\n\tMatch value:\tAll flags set\n\tCondition value:\t0x00000004",
+            "FilterKey": "{b45f13e5-d3e7-485f-a04b-2b5c0fa527cc}",
+            "Weight": "10376293971763658752",
+            "UserSid": "S-1-5-19",
+            "ProviderName": "@bfe.dll,-1211",
+            "FilterType": "%%16388",
+            "LayerId": "46",
+            "ProviderKey": "{decc16ca-3f33-4346-be1e-8fb4ae0f3d62}",
+            "CalloutName": "-",
+            "ChangeType": "%%16385",
+            "CalloutKey": "{00000000-0000-0000-0000-000000000000}",
+            "LayerKey": "{a3b42c97-9f04-4672-b87e-cee9c483257f}",
+            "ProcessId": "1908",
+            "FilterName": "@{Microsoft.Windows.Photos_2019.19071.12548.0_x64__8wekyb3d8bbwe?ms-resource://Microsoft.Windows.Photos/Resources/AppStoreName}"
+        },
+        "opcode": "Info",
+        "task": "Other Policy Change Events",
+        "event_id": "5447",
+        "provider_guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+        "activity_id": "{ea88caff-95e6-0001-b2dd-2b961bd8da01}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Security-Auditing"
+    },
+    "log": {
+        "level": "information"
+    },
+    "event": {
+        "code": "5447",
+        "provider": "Microsoft-Windows-Security-Auditing",
+        "kind": "event",
+        "action": "Other Policy Change Events",
+        "outcome": "success"
+    },
+    "message": "A Windows Filtering Platform filter has been changed.\n\t\nSubject:\n\tSecurity ID:\t\tS-1-5-19\n\tAccount Name:\t\tNT AUTHORITY\\LOCAL SERVICE\n\nProcess Information:\n\tProcess ID:\t1908\n\nProvider Information:\n\tID:\t\t{decc16ca-3f33-4346-be1e-8fb4ae0f3d62}\n\tName:\t\t@bfe.dll,-1211\n\nChange Information:\n\tChange Type:\tDelete\n\nFilter Information:\n\tID:\t\t{b45f13e5-d3e7-485f-a04b-2b5c0fa527cc}\n\tName:\t\t@{Microsoft.Windows.Photos_2019.19071.12548.0_x64__8wekyb3d8bbwe?ms-resource://Microsoft.Windows.Photos/Resources/AppStoreName}\n\tType:\t\tNot persistent\n\tRun-Time ID:\t72367\n\nLayer Information:\n\tID:\t\t{a3b42c97-9f04-4672-b87e-cee9c483257f}\n\tName:\t\tALE Receive/Accept v6 Layer\n\tRun-Time ID:\t46\n\nCallout Information:\n\tID:\t\t{00000000-0000-0000-0000-000000000000}\n\tName:\t\t-\n\nAdditional Information:\n\tWeight:\t10376293971763658752\t\n\tConditions:\t\n\tCondition ID:\t{71bc78fa-f17c-4997-a602-6abb261f351c}\n\tMatch value:\tEqual to\n\tCondition value:\t-\n\n\tCondition ID:\t{af043a0a-b34d-4f86-979c-c90371af6e66}\n\tMatch value:\tEqual to\n\tCondition value:\t\nO:SYG:SYD:(A;;CCRC;;;LA)(A;;CCRC;;;AC)(A;;CCRC;;;S-1-15-3-1)(A;;CCRC;;;S-1-15-3-2)(A;;CCRC;;;S-1-15-3-3)(A;;CCRC;;;S-1-15-3-4214768333-1334025770-122408079-3919188833)\n\n\n\tCondition ID:\t{97537c6c-d9a3-4767-a381-e942675cd920}\n\tMatch value:\tEqual to\n\tCondition value:\t0x00000083\n\n\tCondition ID:\t{72b1a111-987b-4720-99dd-c7c576fa2d4c}\n\tMatch value:\tEqual to\n\tCondition value:\t0x00000001\n\n\tCondition ID:\t{632ce23b-5167-435c-86d7-e903684aa80c}\n\tMatch value:\tAll flags set\n\tCondition value:\t0x00000004\n\n\tFilter Action:\tPermit\n",
+    "label": 0
+}

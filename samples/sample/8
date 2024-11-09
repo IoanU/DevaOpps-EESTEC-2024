@@ -1,0 +1,32 @@
+{
+    "winlog": {
+        "keywords": [
+            "Audit Success"
+        ],
+        "channel": "Security",
+        "event_data": {
+            "RuleId": "{EE949203-DB56-4689-833B-2AEABB546AF7}",
+            "ProfileChanged": "All",
+            "RuleName": "@{F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_10.0.19041.4239_neutral_neutral_cw5n1h2txyewy?ms-resource://F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE/Resources/AppxManifest_DisplayName}"
+        },
+        "opcode": "Info",
+        "event_id": "4946",
+        "task": "MPSSVC Rule-Level Policy Change",
+        "provider_guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+        "activity_id": "{3837d303-5860-0000-8433-c4961bd8da01}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Security-Auditing"
+    },
+    "log": {
+        "level": "information"
+    },
+    "event": {
+        "code": "4946",
+        "provider": "Microsoft-Windows-Security-Auditing",
+        "kind": "event",
+        "action": "MPSSVC Rule-Level Policy Change",
+        "outcome": "success"
+    },
+    "message": "A change was made to the Windows Firewall exception list. A rule was added.\n\t\nProfile Changed:\tAll\n\nAdded Rule:\n\tRule ID:\t{EE949203-DB56-4689-833B-2AEABB546AF7}\n\tRule Name:\t@{F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE_10.0.19041.4239_neutral_neutral_cw5n1h2txyewy?ms-resource://F46D4000-FD22-4DB4-AC8E-4E1DDDE828FE/Resources/AppxManifest_DisplayName}\n",
+    "label": 0
+}

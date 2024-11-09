@@ -1,0 +1,32 @@
+{
+    "winlog": {
+        "keywords": [
+            "Audit Failure"
+        ],
+        "channel": "Security",
+        "event_data": {
+            "RuleId": "RemotePrivNetwork Outbound Default Rule",
+            "RuleName": "RemotePrivNetwork Outbound Default Rule",
+            "RuleAttr": "Remote Addresses"
+        },
+        "opcode": "Info",
+        "event_id": "4957",
+        "task": "MPSSVC Rule-Level Policy Change",
+        "provider_guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+        "activity_id": "{1f208f94-3491-0000-a4a9-f4c604e8da01}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Security-Auditing"
+    },
+    "log": {
+        "level": "information"
+    },
+    "message": "Windows Firewall did not apply the following rule:\n\nRule Information:\n\tID:\tRemotePrivNetwork Outbound Default Rule\n\tName:\tRemotePrivNetwork Outbound Default Rule\n\nError Information:\n\tReason:\tRemote Addresses resolved to an empty set.\n",
+    "event": {
+        "code": "4957",
+        "provider": "Microsoft-Windows-Security-Auditing",
+        "kind": "event",
+        "action": "MPSSVC Rule-Level Policy Change",
+        "outcome": "failure"
+    },
+    "label": 0
+}

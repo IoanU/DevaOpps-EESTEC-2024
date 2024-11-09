@@ -1,0 +1,53 @@
+{
+    "process": {
+        "name": "pycharm-professional-2024.2.0.1.exe",
+        "executable": "C:\\Users\\LAB Administrator\\Downloads\\pycharm-professional-2024.2.0.1.exe"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "event_data": {
+            "PreviousCreationUtcTime": "2024-08-27 13:34:57.719",
+            "User": "MELD\\LAB Administrator"
+        },
+        "opcode": "Info",
+        "version": 5,
+        "task": "File creation time changed (rule: FileCreateTime)",
+        "event_id": "2",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "rule": {
+        "name": "technique_id=T1070.006,technique_name=Timestomp"
+    },
+    "message": "File creation time changed:\nRuleName: technique_id=T1070.006,technique_name=Timestomp\nProcessGuid: {074624d0-cf85-66cd-8505-000000000700}\nProcessId: 6916\nImage: C:\\Users\\LAB Administrator\\Downloads\\pycharm-professional-2024.2.0.1.exe\nTargetFilename: C:\\Program Files\\JetBrains\\PyCharm 2024.2.0.1\\plugins\\python-ce\\helpers\\typeshed\\stubs\\workalendar\\workalendar\\europe\\norway.pyi\nPreviousCreationUtcTime: 2024-08-27 13:34:57.719\nUser: MELD\\LAB Administrator\n",
+    "file": {
+        "path": "C:\\Program Files\\JetBrains\\PyCharm 2024.2.0.1\\plugins\\python-ce\\helpers\\typeshed\\stubs\\workalendar\\workalendar\\europe\\norway.pyi",
+        "extension": "pyi",
+        "name": "norway.pyi",
+        "directory": "C:\\Program Files\\JetBrains\\PyCharm 2024.2.0.1\\plugins\\python-ce\\helpers\\typeshed\\stubs\\workalendar\\workalendar\\europe"
+    },
+    "event": {
+        "code": "2",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "File creation time changed (rule: FileCreateTime)",
+        "category": [
+            "file"
+        ],
+        "type": [
+            "change"
+        ]
+    },
+    "label": 0
+}

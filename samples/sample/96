@@ -1,0 +1,49 @@
+{
+    "process": {
+        "name": "setup.exe",
+        "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\setup.exe"
+    },
+    "file": {
+        "path": "C:\\Users\\LAB Administrator\\AppData\\Local\\Temp\\0q0zudtp\\Microsoft.WindowsDesktop.SharedFramework.8.0.8.0.8.9A7531BE1F70E47A79B6",
+        "extension": "9A7531BE1F70E47A79B6",
+        "name": "Microsoft.WindowsDesktop.SharedFramework.8.0.8.0.8.9A7531BE1F70E47A79B6",
+        "directory": "C:\\Users\\LAB Administrator\\AppData\\Local\\Temp\\0q0zudtp"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "event_data": {
+            "User": "MELD\\LAB Administrator"
+        },
+        "opcode": "Info",
+        "version": 2,
+        "event_id": "11",
+        "task": "File created (rule: FileCreate)",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "message": "File created:\nRuleName: -\nProcessGuid: {d7942c09-da86-66cd-9001-000000000900}\nProcessId: 5900\nImage: C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\setup.exe\nTargetFilename: C:\\Users\\LAB Administrator\\AppData\\Local\\Temp\\0q0zudtp\\Microsoft.WindowsDesktop.SharedFramework.8.0.8.0.8.9A7531BE1F70E47A79B6\nUser: MELD\\LAB Administrator\n",
+    "event": {
+        "code": "11",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "File created (rule: FileCreate)",
+        "category": [
+            "file"
+        ],
+        "type": [
+            "creation"
+        ]
+    },
+    "label": 0
+}

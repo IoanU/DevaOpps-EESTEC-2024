@@ -1,0 +1,55 @@
+{
+    "registry": {
+        "hive": "HKLM",
+        "path": "HKLM\\System\\CurrentControlSet\\Services\\VMware NAT Service",
+        "value": "VMware NAT Service",
+        "key": "System\\CurrentControlSet\\Services\\VMware NAT Service"
+    },
+    "process": {
+        "name": "services.exe",
+        "executable": "C:\\Windows\\system32\\services.exe"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "event_data": {
+            "User": "NT AUTHORITY\\SYSTEM",
+            "EventType": "CreateKey",
+            "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\VMware NAT Service"
+        },
+        "opcode": "Info",
+        "version": 2,
+        "event_id": "12",
+        "task": "Registry object added or deleted (rule: RegistryEvent)",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "rule": {
+        "name": "technique_id=T1543,technique_name=Service Creation"
+    },
+    "message": "Registry object added or deleted:\nRuleName: technique_id=T1543,technique_name=Service Creation\nEventType: CreateKey\nProcessGuid: {c6555c30-c5ff-66cd-0b00-000000000600}\nProcessId: 760\nImage: C:\\Windows\\system32\\services.exe\nTargetObject: HKLM\\System\\CurrentControlSet\\Services\\VMware NAT Service\nUser: NT AUTHORITY\\SYSTEM\n",
+    "event": {
+        "code": "12",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "Registry object added or deleted (rule: RegistryEvent)",
+        "type": [
+            "change"
+        ],
+        "category": [
+            "configuration",
+            "registry"
+        ]
+    },
+    "label": 0
+}
