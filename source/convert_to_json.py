@@ -2,6 +2,7 @@ import os
 import json
 from scapy.all import rdpcap
 from scapy.layers.inet import TCP
+from pathlib import Path
 
 def extract_tcp_payload_to_json(pcap_path, output_json_path):
     

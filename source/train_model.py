@@ -2,10 +2,11 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from joblib import dump
+from pathlib import Path
 
 def main():
-    data_path = "/usr/src/app/InputData/train/train_features.csv"
-    model_dir = "/usr/src/app/source/model"
+    data_path = Path("/usr/src/app/InputData/train/train_features.csv")
+    model_dir = Path("/usr/src/app/source/model")
     model_path = model_dir / "trained_model.pkl"
     columns_path = model_dir / "feature_columns.pkl"
 

@@ -1,6 +1,7 @@
 from utils import load_json
 import pandas as pd
 import os
+from pathlib import Path
 
 def extract_features(file_path):
     # Define feature extraction logic here
@@ -68,7 +69,7 @@ def main():
     features_list = []
 
     for filename in os.listdir(train_dir):
-        file_path = os.path.join(train_dir, filename)
+        file_path = Path(os.path.join(train_dir, filename))
         if file_path.is_file() and filename != "train_features.csv":
             features = extract_features(file_path)
             features_list.append(features)

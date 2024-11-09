@@ -2,6 +2,7 @@ from utils import load_json, save_json
 import pandas as pd
 import os
 from joblib import load
+from pathlib import Path
 
 def extract_features(file_path):
     data = load_json(file_path)
@@ -73,7 +74,7 @@ def main():
     feature_columns = load(columns_path)
 
     for filename in os.listdir(test_dir):
-        file_path = os.path.join(test_dir, filename)
+        file_path = Path(os.path.join(test_dir, filename))
         if file_path.is_file() :
             features = extract_features(file_path)
             features_df = pd.DataFrame([features])
