@@ -1,31 +1,21 @@
 import json
 from pathlib import Path
 
-# Define the project root directory based on this file's location
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+# Define the project root and config path
+PROJECT_ROOT = Path(__file__).resolve().parent
+CONFIG_PATH = PROJECT_ROOT / "config.json"
 
 def load_json(filepath):
-    """
-    Load JSON data from a file.
-    :param filepath: Path to the JSON file.
-    :return: Parsed JSON data as a dictionary.
-    """
+    """Load JSON data from a file."""
     try:
         with open(filepath, 'r') as file:
             return json.load(file)
-    except json.JSONDecodeError as e:
-        print(f"Error decoding JSON from {filepath}: {e}")
-        return {}
-    except FileNotFoundError:
-        print(f"File not found: {filepath}")
+    except (json.JSONDecodeError, FileNotFoundError) as e:
+        print(f"Error loading JSON from {filepath}: {e}")
         return {}
 
 def save_json(data, filepath):
-    """
-    Save data to a file in JSON format.
-    :param data: Data to save (dict or list).
-    :param filepath: Path to the output JSON file.
-    """
+    """Save data to a file in JSON format."""
     try:
         with open(filepath, 'w') as file:
             json.dump(data, file, indent=4)
@@ -34,23 +24,14 @@ def save_json(data, filepath):
         print(f"Error saving JSON to {filepath}: {e}")
 
 def list_json_files(directory):
-    """
-    List all JSON files in a directory.
-    :param directory: Path to the directory.
-    :return: List of JSON file paths.
-    """
-    directory = Path(directory)  # Ensure directory is a Path object
-    json_files = [file for file in directory.iterdir() if file.suffix == '.json']
-    return json_files
+    """List all JSON files in a directory."""
+    directory = Path(directory)
+    return [file for file in directory.iterdir() if file.suffix == '.json']
 
 def load_config():
-    """
-    Load configuration from config.json and resolve paths relative to PROJECT_ROOT.
-    :return: Configuration dictionary with resolved paths.
-    """
-    config_path = PROJECT_ROOT / "config.json"
+    """Load configuration and resolve paths relative to the PROJECT_ROOT."""
     try:
-        with open(config_path, 'r') as f:
+        with open(CONFIG_PATH, 'r') as f:
             config = json.load(f)
         
         # Resolve paths relative to the project root
@@ -61,8 +42,8 @@ def load_config():
         
         return config
     except json.JSONDecodeError as e:
-        print(f"Error decoding JSON from {config_path}: {e}")
+        print(f"Error decoding JSON from {CONFIG_PATH}: {e}")
         return {}
     except FileNotFoundError:
-        print(f"Config file not found: {config_path}")
+        print(f"Config file not found: {CONFIG_PATH}")
         return {}

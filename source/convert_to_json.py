@@ -9,7 +9,7 @@ config = load_config()
 
 # Process PCAP files for test files
 input_folder_test = config["test_dir"]
-output_folder_test = config["test_dir"].parent / "test.json"
+output_folder_test = config["output_dir"].parent / "test.json"
 
 # Create output folder if it doesn't already exist
 output_folder_test.mkdir(exist_ok=True)
@@ -20,7 +20,8 @@ for filename in os.listdir(input_folder_test):
         pcap_path = input_folder_test / filename
         packets = rdpcap(str(pcap_path))
         
-        json_extracted = False  # Flag to indicate if a valid JSON payload was extracted
+        # Flag to indicate if a valid JSON payload was extracted
+        json_extracted = False
         
         # Iterate over packets to find JSON payload
         for packet in packets:
@@ -46,7 +47,7 @@ for filename in os.listdir(input_folder_test):
 
 # Process PCAP files for training files
 input_folder_train = config["train_dir"]
-output_folder_train = config["train_dir"].parent / "train.json"
+output_folder_train = config["output_dir"].parent / "train.json"
 
 # Create output folder if it doesn't already exist
 output_folder_train.mkdir(exist_ok=True)
@@ -57,7 +58,8 @@ for filename in os.listdir(input_folder_train):
         pcap_path = input_folder_train / filename
         packets = rdpcap(str(pcap_path))
         
-        json_extracted = False  # Flag to indicate if a valid JSON payload was extracted
+        # Flag to indicate if a valid JSON payload was extracted
+        json_extracted = False
         
         # Iterate over packets to find JSON payload
         for packet in packets:

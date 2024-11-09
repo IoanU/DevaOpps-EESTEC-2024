@@ -25,15 +25,12 @@ def main():
     output_path = train_dir / "train_features.csv"
     features_list = []
 
-    # Process each file in train_dir
     for filename in os.listdir(train_dir):
         file_path = train_dir / filename
         if file_path.is_file() and filename != "train_features.csv":
-            #print(f"Processing file: {filename}")
             features = extract_features(file_path)
             features_list.append(features)
 
-    # Save extracted features to CSV
     df = pd.DataFrame(features_list)
     df.to_csv(output_path, index=False)
     print(f"Feature extraction complete. Saved to {output_path}. DataFrame saved with {len(df)} rows.")

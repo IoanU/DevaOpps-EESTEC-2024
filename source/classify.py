@@ -23,7 +23,7 @@ def main():
     model_path = config["model_dir"] / "trained_model.pkl"
     columns_path = config["model_dir"] / "feature_columns.pkl"
     test_dir = config["test_dir"]
-    output_path = config["output_dir"] / "labels.json"
+    output_path = config["output_dir"] / "labels"
     predictions = {}
 
     model = load(model_path)
@@ -34,10 +34,7 @@ def main():
         if file_path.is_file():
             features = extract_features(file_path)
             features_df = pd.DataFrame([features])
-
-            # Apply one-hot encoding and align columns
             features_encoded = pd.get_dummies(features_df).reindex(columns=feature_columns, fill_value=0)
-
             try:
                 predicted_label = model.predict(features_encoded)[0]
                 predictions[filename] = int(predicted_label)
