@@ -50,7 +50,7 @@ def process_pcap_files(input_dir):
 
 def main():
     # Procesează fișierele din ambele directoare
-    process_pcap_files("/home/student/Desktop")
+    process_pcap_files("/usr/src/app/InputData/train")
     process_pcap_files("/usr/src/app/InputData/test")
 
 if __name__ == "__main__":
