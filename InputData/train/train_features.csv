@@ -20,7 +20,7 @@ msiexec.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,c
 svchost.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1574.010,technique_name=Services File Permissions Weakness",information,file,creation,0,0
 ,800,Windows PowerShell,,,information,process,info,0,0
 pycharm-professional-2024.2.0.1.exe,2,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1070.006,technique_name=Timestomp",information,file,change,0,0
-laZagne_x64.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1036,technique_name=Masquerading",information,process,access,24,1
+laZagne_x64.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1036,technique_name=Masquerading",information,process,access,1527,1
 svchost.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
 SearchApp.exe,7,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,process,change,0,0
 Explorer.EXE,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,1
@@ -34,7 +34,7 @@ Explorer.EXE,15,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T118
 svchost.exe,12,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1053,technique_name=Scheduled Task",information,"configuration,registry",change,0,0
 ,800,Windows PowerShell,,,information,process,info,0,0
 ,5447,Security,,,information,,,0,0
-laZagne_x64.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1036,technique_name=Masquerading",information,process,access,24,1
+laZagne_x64.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1036,technique_name=Masquerading",information,process,access,1527,1
 ,5447,Security,,,information,,,0,0
 svchost.exe,12,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1053,technique_name=Scheduled Task",information,"configuration,registry",change,0,0
 ,5447,Security,,,information,,,0,0
@@ -52,7 +52,7 @@ setup.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,cre
 svchost.exe,13,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,0
 lsass.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1574.010,technique_name=Services File Permissions Weakness",information,file,creation,0,1
 svchost.exe,13,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,0
-laZagne_x64.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1036,technique_name=Masquerading",information,process,access,24,1
+laZagne_x64.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1036,technique_name=Masquerading",information,process,access,1531,1
 services.exe,12,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,0
 ,4657,Security,,,information,,,0,0
 mscorsvw.exe,7,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1574.002,technique_name=DLL Side-Loading",information,process,change,0,0
@@ -61,7 +61,7 @@ PChunter64.exe,13,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,"co
 ,4103,Microsoft-Windows-PowerShell/Operational,S-1-5-21-981878584-487602356-1169203714-500,,information,process,info,0,0
 ,5447,Security,,,information,,,0,0
 reg.exe,1,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,process,"start,process_start",0,1
-laZagne_x64.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1036,technique_name=Masquerading",information,process,access,24,1
+laZagne_x64.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1036,technique_name=Masquerading",information,process,access,1531,1
 laZagne_x64.exe,23,Microsoft-Windows-Sysmon/Operational,S-1-5-18,Executables,information,file,deletion,0,1
 pycharm-community-2024.2.0.1.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
 msiexec.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
@@ -74,7 +74,7 @@ Explorer.EXE,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,
 ,5145,Security,,,information,,,0,0
 Explorer.EXE,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,1
 svchost.exe,12,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,0
-OneDriveSetup.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1036,technique_name=Masquerading",information,process,access,24,1
+OneDriveSetup.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1036,technique_name=Masquerading",information,process,access,1055,1
 ,800,Windows PowerShell,,,information,process,info,0,0
 ,255,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,error,,,0,0
 ,5447,Security,,,information,,,0,0
@@ -84,7 +84,7 @@ Explorer.EXE,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,
 ,4103,Microsoft-Windows-PowerShell/Operational,S-1-5-21-981878584-487602356-1169203714-500,,information,process,info,0,0
 pycharm-community-2024.2.0.1.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
 ,800,Windows PowerShell,,,information,process,info,0,0
-powershell.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1055.001,technique_name=Dynamic-link Library Injection",information,process,access,13,1
+powershell.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1055.001,technique_name=Dynamic-link Library Injection",information,process,access,1231,1
 ,5449,Security,,,information,,,0,0
 pycharm-professional-2024.2.0.1.exe,2,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1070.006,technique_name=Timestomp",information,file,change,0,0
 msiexec.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
@@ -108,7 +108,7 @@ python.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,cr
 svchost.exe,13,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,0
 ,4634,Security,,,information,authentication,end,0,0
 svchost.exe,12,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,0
-NGenTask.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1055.001,technique_name=Dynamic-link Library Injection",information,process,access,24,0
+NGenTask.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1055.001,technique_name=Dynamic-link Library Injection",information,process,access,893,0
 pycharm-professional-2024.2.0.1.exe,2,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1070.006,technique_name=Timestomp",information,file,change,0,0
 Explorer.EXE,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,1
 -,4624,Security,,,information,authentication,start,0,0
@@ -125,7 +125,7 @@ nslookup.exe,4688,Security,,,information,process,start,0,1
 Explorer.EXE,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,1
 ,5447,Security,,,information,,,0,0
 ,800,Windows PowerShell,,,information,process,info,0,0
-laZagne_x64.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1036,technique_name=Masquerading",information,process,access,24,1
+laZagne_x64.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1036,technique_name=Masquerading",information,process,access,1527,1
 ,5447,Security,,,information,,,0,0
 ,5449,Security,,,information,,,0,0
 msiexec.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1574.010,technique_name=Services File Permissions Weakness",information,file,creation,0,0

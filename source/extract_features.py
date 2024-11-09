@@ -1,15 +1,10 @@
-import os
+from utils import load_config, load_json
 import pandas as pd
-from utils import load_json
+import os
 
 def extract_features(file_path):
-    """
-    Extracts relevant features from a single JSON file.
-    :param file_path: Path to the JSON file.
-    :return: A dictionary of extracted features.
-    """
+    # Define feature extraction logic here
     data = load_json(file_path)
-    
     features = {
         "process_name": data.get("process", {}).get("name", ""),
         "event_id": data.get("winlog", {}).get("event_id", ""),
@@ -19,24 +14,22 @@ def extract_features(file_path):
         "log_level": data.get("log", {}).get("level", ""),
         "event_category": ','.join(data.get("event", {}).get("category", [])),
         "event_type": ','.join(data.get("event", {}).get("type", [])),
-        "call_trace_length": len(data.get("winlog", {}).get("event_data", {}).get("CallTrace", "").split("|")) if "CallTrace" in data.get("winlog", {}).get("event_data", {}) else 0,
+        "call_trace_length": len(data.get("winlog", {}).get("event_data", {}).get("CallTrace", [])),
         "label": data.get("label", None)
     }
-    
     return features
 
 def main():
-    train_dir = "/home/matei/Repositories/DevaOpps/InputData/train"
-    output_path = os.path.join(train_dir, "train_features.csv")
+    config = load_config()
+    train_dir = config["train_dir"]
+    output_path = train_dir / "train_features.csv"
     features_list = []
 
-    # Process each file in train_dir, excluding `train_features.csv`
+    # Process each file in train_dir
     for filename in os.listdir(train_dir):
-        file_path = os.path.join(train_dir, filename)
-
-        # Ensure it’s a file and not the output CSV before processing
-        if os.path.isfile(file_path) and filename != "train_features.csv":
-            print(f"Processing file: {filename}")
+        file_path = train_dir / filename
+        if file_path.is_file() and filename != "train_features.csv":
+            #print(f"Processing file: {filename}")
             features = extract_features(file_path)
             features_list.append(features)
 
@@ -47,4 +40,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

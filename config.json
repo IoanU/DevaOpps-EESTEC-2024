@@ -1,0 +1,7 @@
+{
+    "train_dir": "InputData/train",
+    "test_dir": "InputData/test",
+    "output_dir": "output",
+    "model_dir": "source/model"
+}
+

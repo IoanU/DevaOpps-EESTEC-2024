@@ -1,5 +1,8 @@
 import json
-import os
+from pathlib import Path
+
+# Define the project root directory based on this file's location
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 def load_json(filepath):
     """
@@ -36,9 +39,30 @@ def list_json_files(directory):
     :param directory: Path to the directory.
     :return: List of JSON file paths.
     """
-    json_files = []
-    for filename in os.listdir(directory):
-        if filename.endswith(".json"):
-            json_files.append(os.path.join(directory, filename))
+    directory = Path(directory)  # Ensure directory is a Path object
+    json_files = [file for file in directory.iterdir() if file.suffix == '.json']
     return json_files
 
+def load_config():
+    """
+    Load configuration from config.json and resolve paths relative to PROJECT_ROOT.
+    :return: Configuration dictionary with resolved paths.
+    """
+    config_path = PROJECT_ROOT / "config.json"
+    try:
+        with open(config_path, 'r') as f:
+            config = json.load(f)
+        
+        # Resolve paths relative to the project root
+        config["train_dir"] = PROJECT_ROOT / config["train_dir"]
+        config["test_dir"] = PROJECT_ROOT / config["test_dir"]
+        config["output_dir"] = PROJECT_ROOT / config["output_dir"]
+        config["model_dir"] = PROJECT_ROOT / config["model_dir"]
+        
+        return config
+    except json.JSONDecodeError as e:
+        print(f"Error decoding JSON from {config_path}: {e}")
+        return {}
+    except FileNotFoundError:
+        print(f"Config file not found: {config_path}")
+        return {}

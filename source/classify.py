@@ -1,35 +1,47 @@
-import os
+from utils import load_config, load_json, save_json
 import pandas as pd
+import os
 from joblib import load
-from utils import load_json, save_json
-from extract_features import extract_features
+
+def extract_features(file_path):
+    data = load_json(file_path)
+    features = {
+        "process_name": data.get("process", {}).get("name", ""),
+        "event_id": data.get("winlog", {}).get("event_id", ""),
+        "event_channel": data.get("winlog", {}).get("channel", ""),
+        "user_identifier": data.get("winlog", {}).get("user", {}).get("identifier", ""),
+        "rule_name": data.get("rule", {}).get("name", ""),
+        "log_level": data.get("log", {}).get("level", ""),
+        "event_category": ','.join(data.get("event", {}).get("category", [])),
+        "event_type": ','.join(data.get("event", {}).get("type", [])),
+        "call_trace_length": len(data.get("winlog", {}).get("event_data", {}).get("CallTrace", [])),
+    }
+    return features
 
 def main():
-    model_path = "/home/matei/Repositories/DevaOpps/source/model/trained_model.pkl"
-    columns_path = "/home/matei/Repositories/DevaOpps/source/model/feature_columns.pkl"
-    test_dir = "/home/matei/Repositories/DevaOpps/InputData/test"
-    output_path = "/home/matei/Repositories/DevaOpps/output/labels.json"
+    config = load_config()
+    model_path = config["model_dir"] / "trained_model.pkl"
+    columns_path = config["model_dir"] / "feature_columns.pkl"
+    test_dir = config["test_dir"]
+    output_path = config["output_dir"] / "labels.json"
     predictions = {}
 
-    # Load model and columns
     model = load(model_path)
     feature_columns = load(columns_path)
-    print("Model and feature columns loaded successfully.")
 
     for filename in os.listdir(test_dir):
-        file_path = os.path.join(test_dir, filename)
-        if os.path.isfile(file_path):
+        file_path = test_dir / filename
+        if file_path.is_file():
             features = extract_features(file_path)
             features_df = pd.DataFrame([features])
 
             # Apply one-hot encoding and align columns
-            features_encoded = pd.get_dummies(features_df)
-            features_encoded = features_encoded.reindex(columns=feature_columns, fill_value=0)
+            features_encoded = pd.get_dummies(features_df).reindex(columns=feature_columns, fill_value=0)
 
             try:
                 predicted_label = model.predict(features_encoded)[0]
                 predictions[filename] = int(predicted_label)
-                print(f"Prediction for {filename}: {predicted_label}")
+                #print(f"Prediction for {filename}: {predicted_label}")
             except Exception as e:
                 print(f"Error during prediction for {filename}: {e}")
                 continue

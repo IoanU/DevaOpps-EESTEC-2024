@@ -42,6 +42,5 @@
         "kind": "event",
         "action": "Other Policy Change Events",
         "outcome": "success"
-    },
-    "label": 0
+    }
 }
