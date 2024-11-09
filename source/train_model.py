@@ -6,7 +6,7 @@ from joblib import dump
 
 def main():
     # Load the extracted features from train_features.csv
-    data_path = "./InputData/train/train_features.csv"
+    data_path = "../InputData/train/train_features.csv"
     df = pd.read_csv(data_path)
 
     # Separate features and labels
@@ -26,7 +26,7 @@ def main():
     print(f"Validation Accuracy: {accuracy:.2f}")
 
     # Save the trained model
-    model_path = "./source/model/trained_model.pkl"
+    model_path = "../source/model/trained_model.pkl"
     dump(model, model_path)
     print(f"Model saved to {model_path}")
 
