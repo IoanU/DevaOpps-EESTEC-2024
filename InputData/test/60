@@ -1,0 +1,72 @@
+{
+    "process": {
+        "args": [
+            "nslookup",
+            "10.78.85.158"
+        ],
+        "parent": {
+            "name": "cmd.exe",
+            "executable": "C:\\Windows\\System32\\cmd.exe"
+        },
+        "name": "nslookup.exe",
+        "command_line": "nslookup  10.78.85.158",
+        "executable": "C:\\Windows\\System32\\nslookup.exe"
+    },
+    "winlog": {
+        "keywords": [
+            "Audit Success"
+        ],
+        "logon": {
+            "id": "0x2d966e"
+        },
+        "channel": "Security",
+        "event_data": {
+            "MandatoryLabel": "S-1-16-12288",
+            "TargetLogonId": "0x0",
+            "CommandLine": "nslookup  10.78.85.158",
+            "SubjectUserName": "LAB Administrator",
+            "TokenElevationType": "%%1936",
+            "SubjectDomainName": "MELD",
+            "ProcessId": "0x1a50",
+            "SubjectLogonId": "0x2d966e",
+            "TargetUserName": "-",
+            "TargetDomainName": "-",
+            "SubjectUserSid": "S-1-5-21-981878584-487602356-1169203714-500",
+            "TargetUserSid": "S-1-0-0"
+        },
+        "opcode": "Info",
+        "version": 2,
+        "task": "Process Creation",
+        "event_id": "4688",
+        "provider_guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Security-Auditing"
+    },
+    "log": {
+        "level": "information"
+    },
+    "message": "A new process has been created.\n\nCreator Subject:\n\tSecurity ID:\t\tS-1-5-21-981878584-487602356-1169203714-500\n\tAccount Name:\t\tLAB Administrator\n\tAccount Domain:\t\tMELD\n\tLogon ID:\t\t0x2D966E\n\nTarget Subject:\n\tSecurity ID:\t\tS-1-0-0\n\tAccount Name:\t\t-\n\tAccount Domain:\t\t-\n\tLogon ID:\t\t0x0\n\nProcess Information:\n\tNew Process ID:\t\t0x1620\n\tNew Process Name:\tC:\\Windows\\System32\\nslookup.exe\n\tToken Elevation Type:\tTokenElevationTypeDefault (1)\n\tMandatory Label:\t\tS-1-16-12288\n\tCreator Process ID:\t0x1a50\n\tCreator Process Name:\tC:\\Windows\\System32\\cmd.exe\n\tProcess Command Line:\tnslookup  10.78.85.158\n\nToken Elevation Type indicates the type of token that was assigned to the new process in accordance with User Account Control policy.\n\nType 1 is a full token with no privileges removed or groups disabled.  A full token is only used if User Account Control is disabled or if the user is the built-in Administrator account or a service account.\n\nType 2 is an elevated token with no privileges removed or groups disabled.  An elevated token is used when User Account Control is enabled and the user chooses to start the program using Run as administrator.  An elevated token is also used when an application is configured to always require administrative privilege or to always require maximum privilege, and the user is a member of the Administrators group.\n\nType 3 is a limited token with administrative privileges removed and administrative groups disabled.  The limited token is used when User Account Control is enabled, the application does not require administrative privilege, and the user does not choose to start the program using Run as administrator.\n",
+    "related": {
+        "user": "LAB Administrator"
+    },
+    "event": {
+        "code": "4688",
+        "provider": "Microsoft-Windows-Security-Auditing",
+        "kind": "event",
+        "module": "security",
+        "action": "created-process",
+        "type": [
+            "start"
+        ],
+        "category": [
+            "process"
+        ],
+        "outcome": "success"
+    },
+    "user": {
+        "domain": "MELD",
+        "name": "LAB Administrator",
+        "id": "S-1-5-21-981878584-487602356-1169203714-500"
+    },
+    "label": 1
+}

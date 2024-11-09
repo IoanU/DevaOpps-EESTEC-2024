@@ -26,19 +26,24 @@ def extract_features(file_path):
     return features
 
 def main():
-    train_dir = "../InputData/train"
+    train_dir = "/home/matei/Repositories/DevaOpps/InputData/train"
     output_path = os.path.join(train_dir, "train_features.csv")
     features_list = []
 
+    # Process each file in train_dir, excluding `train_features.csv`
     for filename in os.listdir(train_dir):
-        if filename.endswith(".json"):
-            file_path = os.path.join(train_dir, filename)
+        file_path = os.path.join(train_dir, filename)
+
+        # Ensure it’s a file and not the output CSV before processing
+        if os.path.isfile(file_path) and filename != "train_features.csv":
+            print(f"Processing file: {filename}")
             features = extract_features(file_path)
             features_list.append(features)
 
+    # Save extracted features to CSV
     df = pd.DataFrame(features_list)
     df.to_csv(output_path, index=False)
-    print(f"Feature extraction complete. Saved to {output_path}.")
+    print(f"Feature extraction complete. Saved to {output_path}. DataFrame saved with {len(df)} rows.")
 
 if __name__ == "__main__":
     main()
