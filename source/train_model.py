@@ -14,7 +14,7 @@ def main():
     X = pd.get_dummies(df.drop(columns=["label"]), drop_first=True)
     y = df["label"]
 
-    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2)
+    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
     model = RandomForestClassifier().fit(X_train, y_train)
 
     model_dir.mkdir(parents=True, exist_ok=True)
