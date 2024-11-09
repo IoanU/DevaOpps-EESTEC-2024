@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 # Define the project root and config path
-PROJECT_ROOT = "/usr/src/app"
+PROJECT_ROOT = Path("/usr/src/app")
 CONFIG_PATH = PROJECT_ROOT / "config.json"
 
 def load_json(filepath):
