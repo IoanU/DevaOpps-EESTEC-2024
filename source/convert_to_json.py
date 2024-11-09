@@ -30,6 +30,7 @@ def process_pcap_files(input_dir):
     # Procesează toate fișierele .pcap din directorul specificat, convertindu-le în JSON și ștergând fișierele inițiale.
 
     for filename in os.listdir(input_dir):
+        file_path = Path(input_dir) / filename
         if not filename.endswith(".pcap"):
             new_filename = f"{filename}.pcap"
             new_file_path = file_path.with_name(new_filename)
