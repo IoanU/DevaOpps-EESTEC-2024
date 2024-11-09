@@ -1,20 +1,21 @@
 #!/bin/bash
 
-# Check if we're running in the task environment or locally
+# Detect environment and set paths dynamically
 if [ -n "$TASK_ENVIRONMENT" ]; then
-    # Task environment paths
     DATAFOLDER="/usr/src/app/DataFolder"
     INPUTDATA="/usr/src/app/InputData"
     SOURCE="/usr/src/app/source"
     OUTPUT="/usr/src/app/output"
 else
-    # Local environment paths (relative paths based on this script's location)
     BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd)"
     DATAFOLDER="$BASE_DIR/DataFolder"
     INPUTDATA="$BASE_DIR/InputData"
     SOURCE="$BASE_DIR/source"
     OUTPUT="$BASE_DIR/output"
 fi
+
+# Ensure the output directory exists
+mkdir -p "$OUTPUT"
 
 # Step 1: Install packages from DataFolder/packageScript.sh
 echo "Installing packages..."
@@ -37,6 +38,5 @@ echo "Classifying test data..."
 python3 $SOURCE/classify.py
 
 # Step 6: Move the generated labels.json to the output directory with correct filename
-echo "Saving output to $OUTPUT/labels..."
 
 echo "Pipeline completed successfully."
