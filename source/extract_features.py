@@ -26,7 +26,7 @@ def extract_features(file_path):
     return features
 
 def main():
-    train_dir = "/home/matei/Repositorie/DevaOpps/InputData/train"
+    train_dir = "./DevaOpps/InputData/train"
     output_path = os.path.join(train_dir, "train_features.csv")
     features_list = []
 

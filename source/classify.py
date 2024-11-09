@@ -6,11 +6,11 @@ from extract_features import extract_features  # Reuse the feature extraction fu
 
 def main():
     # Load the trained model
-    model_path = "/usr/src/app/source/model/trained_model.pkl"
+    model_path = "./source/model/trained_model.pkl"
     model = load(model_path)
     
     # Directory containing test files
-    test_dir = "/home/matei/Repositories/DevaOpps/InputData/test"
+    test_dir = "./InputData/test"
     predictions = {}
 
     # Process and classify each test file
@@ -27,7 +27,7 @@ def main():
             predictions[filename] = int(predicted_label)  # Convert to int for JSON serialization
 
     # Save predictions to the output JSON file
-    output_path = "/usr/src/app/output/labels.json"
+    output_path = "./output/labels.json"
     save_json(predictions, output_path)
     print(f"Classification complete. Predictions saved to {output_path}")
 
