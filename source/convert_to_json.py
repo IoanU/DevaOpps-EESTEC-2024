@@ -1,89 +1,57 @@
 import os
 import json
 from scapy.all import rdpcap
-from pathlib import Path
-from utils import load_config
+from scapy.layers.inet import TCP
 
-# Load configuration for dynamic paths
-config = load_config()
+def extract_tcp_payload_to_json(pcap_path, output_json_path):
+    
+    # Extrage payload-ul TCP din fișierele .pcap și le salvează într-un fișier JSON.
+    
+    packets = rdpcap(pcap_path)
+    tcp_payloads = []
 
-# Process PCAP files for test files
-input_folder_test = config["test_dir"]
-output_folder_test = config["test_dir"].parent / "test.json"
+    # Parcurge fiecare pachet și extrage payload-ul TCP
+    for packet in packets:
+        if packet.haslayer(TCP) and packet[TCP].payload:
+            payload_bytes = bytes(packet[TCP].payload)
+            try:
+                payload_text = payload_bytes.decode("utf-8")
+                tcp_payloads.append(payload_text)
+            except UnicodeDecodeError:
+                # Ignoră payload-urile care nu sunt în format text
+                continue
 
-# Create output folder if it doesn't already exist
-output_folder_test.mkdir(exist_ok=True)
+    # Salvează payload-urile într-un fișier JSON
+    with open(output_json_path, 'w', encoding='utf-8') as f:
+        json.dump(tcp_payloads, f, ensure_ascii=False, indent=4)
 
-# Iterate over all files in the test input folder
-for filename in os.listdir(input_folder_test):
-    if filename.endswith(".pcap"):
-        pcap_path = input_folder_test / filename
-        packets = rdpcap(str(pcap_path))
-        
-        json_extracted = False  # Flag to indicate if a valid JSON payload was extracted
-        
-        # Iterate over packets to find JSON payload
-        for packet in packets:
-            if packet.haslayer("TCP") and packet["TCP"].payload:
-                payload_bytes = bytes(packet["TCP"].payload)
-                
-                try:
-                    json_data = payload_bytes.decode("utf-8")
-                    json_object = json.loads(json_data)
-                    
-                    # Create JSON file for this PCAP file
-                    json_filename = pcap_path.stem + ".json"
-                    json_path = output_folder_test / json_filename
-                    
-                    with open(json_path, "w") as json_file:
-                        json.dump(json_object, json_file, indent=4)
-                    
-                    json_extracted = True
+def process_pcap_files(input_dir):
+    
+    # Procesează toate fișierele .pcap din directorul specificat, convertindu-le în JSON și ștergând fișierele inițiale.
 
-                    break
+    for filename in os.listdir(input_dir):
+        if not filename.endswith(".pcap"):
+            new_filename = f"{filename}.pcap"
+            new_file_path = file_path.with_name(new_filename)
+            # Redenumește fișierul pentru a adăuga extensia .pcap
+            file_path.rename(new_file_path)
+    
+    for filename in os.listdir(input_dir):
+        if filename.endswith(".pcap"):
+            pcap_path = os.path.join(input_dir, filename)
+            json_path = os.path.join(input_dir, f"{os.path.splitext(filename)[0]}.json")
 
-                except (UnicodeDecodeError, json.JSONDecodeError):
-                    continue
+            # Extrage payload-ul și salvează în JSON
+            extract_tcp_payload_to_json(pcap_path, json_path)
 
-                if json_extracted:
-                    os.remove(pcap_path)
-
-# Process PCAP files for training files
-input_folder_train = config["train_dir"]
-output_folder_train = config["train_dir"].parent / "train.json"
-
-# Create output folder if it doesn't already exist
-output_folder_train.mkdir(exist_ok=True)
-
-# Iterate over all files in the train input folder
-for filename in os.listdir(input_folder_train):
-    if filename.endswith(".pcap"):
-        pcap_path = input_folder_train / filename
-        packets = rdpcap(str(pcap_path))
-        
-        json_extracted = False  # Flag to indicate if a valid JSON payload was extracted
-        
-        # Iterate over packets to find JSON payload
-        for packet in packets:
-            if packet.haslayer("TCP") and packet["TCP"].payload:
-                payload_bytes = bytes(packet["TCP"].payload)
-                
-                try:
-                    json_data = payload_bytes.decode("utf-8")
-                    json_object = json.loads(json_data)
-                    
-                    # Create JSON file for this PCAP file
-                    json_filename = pcap_path.stem + ".json"
-                    json_path = output_folder_train / json_filename
-                    
-                    with open(json_path, "w") as json_file:
-                        json.dump(json_object, json_file, indent=4)
-                    
-                    json_extracted = True
-                    break
-
-                except (UnicodeDecodeError, json.JSONDecodeError):
-                    continue
-
-        if json_extracted:
+            # Șterge fișierul .pcap inițial
             os.remove(pcap_path)
+            print(f"Fișier procesat și șters: {pcap_path}")
+
+def main():
+    # Procesează fișierele din ambele directoare
+    process_pcap_files("/home/student/Desktop")
+    process_pcap_files("/usr/src/app/InputData/test")
+
+if __name__ == "__main__":
+    main()

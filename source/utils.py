@@ -3,7 +3,7 @@ from pathlib import Path
 
 # Define the project root and config path
 PROJECT_ROOT = Path("/usr/src/app")
-CONFIG_PATH = Path("/usr/src/app/source") / "config.json"
+CONFIG_PATH = Path("/usr/src/app/source/config.json")
 
 def load_json(filepath):
     """Load JSON data from a file."""
@@ -28,22 +28,3 @@ def list_json_files(directory):
     directory = Path(directory)
     return [file for file in directory.iterdir() if file.suffix == '.json']
 
-def load_config():
-    """Load configuration and resolve paths relative to the PROJECT_ROOT."""
-    try:
-        with open(CONFIG_PATH, 'r') as f:
-            config = json.load(f)
-        
-        # Resolve paths relative to the project root
-        config["train_dir"] = PROJECT_ROOT / config["train_dir"]
-        config["test_dir"] = PROJECT_ROOT / config["test_dir"]
-        config["output_dir"] = PROJECT_ROOT / config["output_dir"]
-        config["model_dir"] = PROJECT_ROOT / config["model_dir"]
-        
-        return config
-    except json.JSONDecodeError as e:
-        print(f"Error decoding JSON from {CONFIG_PATH}: {e}")
-        return {}
-    except FileNotFoundError:
-        print(f"Config file not found: {CONFIG_PATH}")
-        return {}
