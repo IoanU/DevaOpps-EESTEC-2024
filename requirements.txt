@@ -1,5 +1,0 @@
-scapy
-dpkt
-pandas
-scikit-learn
-joblib

@@ -1,5 +1,12 @@
-scapy
 dpkt
-pandas
-scikit-learn
 joblib
+numpy
+pandas
+python-dateutil
+pytz
+scapy
+scikit-learn
+scipy
+six
+threadpoolctl
+tzdata

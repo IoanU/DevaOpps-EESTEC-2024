@@ -1,16 +1,12 @@
 #!/bin/bash
 
-# Set the packages and requirements paths based on the current script location
-if [ -n "$TASK_ENVIRONMENT" ]; then
-    # Task environment paths
-    PACKAGES_DIR="/usr/src/app/DataFolder/packages"
-    REQUIREMENTS_FILE="/usr/src/app/DataFolder/requirements.txt"
-else
-    # Local environment paths (relative to this script's location)
-    BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-    PACKAGES_DIR="$BASE_DIR/packages"
-    REQUIREMENTS_FILE="$BASE_DIR/requirements.txt"
-fi
+# Define the path to the packages directory and requirements file
+PACKAGES_DIR="$(cd "$(dirname "$0")" && pwd)/packages"
+REQUIREMENTS_FILE="$(cd "$(dirname "$0")" && pwd)/requirements.txt"
 
-# Install all packages offline from the packages directory
-pip install --no-index --break-system-packages --find-links "$PACKAGES_DIR" -r "$REQUIREMENTS_FILE"
+echo "Installing packages from $PACKAGES_DIR..."
+
+# Install packages from the local wheel files
+pip install --no-index --break-system-packages --find-links="$PACKAGES_DIR" -r "$REQUIREMENTS_FILE" --user
+
+echo "Package installation completed."
