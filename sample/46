@@ -1,0 +1,92 @@
+{
+    "process": {
+        "name": "pypykatz.exe",
+        "executable": "C:\\Users\\LAB Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\pypykatz.exe"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "event_data": {
+            "SignatureStatus": "Unavailable",
+            "Company": "-",
+            "User": "MELD\\LAB Administrator",
+            "Description": "-",
+            "Signed": "false",
+            "Signature": "-",
+            "FileVersion": "-",
+            "Product": "-"
+        },
+        "opcode": "Info",
+        "version": 3,
+        "task": "Image loaded (rule: ImageLoad)",
+        "event_id": "7",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "rule": {
+        "name": "technique_id=T1574.002,technique_name=DLL Side-Loading"
+    },
+    "message": "Image loaded:\nRuleName: technique_id=T1574.002,technique_name=DLL Side-Loading\nProcessGuid: {c6555c30-5a97-66c4-fa02-000000001300}\nProcessId: 9236\nImage: C:\\Users\\LAB Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\pypykatz.exe\nImageLoaded: C:\\Users\\LAB Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\pypykatz.exe\nFileVersion: -\nDescription: -\nProduct: -\nCompany: -\nOriginalFileName: -\nHashes: SHA1=06C5DDD47889A13B7353592B1A0E1DD58E73D05E,MD5=53C93E857FE652A5E4761CE688E5C16C,SHA256=044AABE0A4F3B8B0381D31A74978D57935FF217005F5D566E23FDA3C8CF1605A,IMPHASH=C51D659B4B1142D4AF3795D09F1D63F7\nSigned: false\nSignature: -\nSignatureStatus: Unavailable\nUser: MELD\\LAB Administrator\n",
+    "file": {
+        "path": "C:\\Users\\LAB Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\pypykatz.exe",
+        "extension": "exe",
+        "code_signature": {
+            "valid": false,
+            "subject_name": "-",
+            "signed": true,
+            "status": "Unavailable"
+        },
+        "pe": {
+            "file_version": "-",
+            "product": "-",
+            "imphash": "c51d659b4b1142d4af3795d09f1d63f7",
+            "description": "-",
+            "original_file_name": "-",
+            "company": "-"
+        },
+        "name": "pypykatz.exe",
+        "directory": "C:\\Users\\LAB Administrator\\AppData\\Local\\Programs\\Python\\Python312\\Scripts",
+        "hash": {
+            "sha1": "06c5ddd47889a13b7353592b1a0e1dd58e73d05e",
+            "sha256": "044aabe0a4f3b8b0381d31a74978d57935ff217005f5d566e23fda3c8cf1605a",
+            "md5": "53c93e857fe652a5e4761ce688e5c16c"
+        }
+    },
+    "related": {
+        "hash": [
+            "06c5ddd47889a13b7353592b1a0e1dd58e73d05e",
+            "53c93e857fe652a5e4761ce688e5c16c",
+            "044aabe0a4f3b8b0381d31a74978d57935ff217005f5d566e23fda3c8cf1605a",
+            "c51d659b4b1142d4af3795d09f1d63f7"
+        ]
+    },
+    "event": {
+        "code": "7",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "Image loaded (rule: ImageLoad)",
+        "category": [
+            "process"
+        ],
+        "type": [
+            "change"
+        ]
+    },
+    "hash": {
+        "sha1": "06c5ddd47889a13b7353592b1a0e1dd58e73d05e",
+        "imphash": "c51d659b4b1142d4af3795d09f1d63f7",
+        "sha256": "044aabe0a4f3b8b0381d31a74978d57935ff217005f5d566e23fda3c8cf1605a",
+        "md5": "53c93e857fe652a5e4761ce688e5c16c"
+    },
+    "label": 1
+}

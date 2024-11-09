@@ -1,0 +1,100 @@
+{
+    "process": {
+        "args": [
+            "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        ],
+        "args_count": 1,
+        "title": "ConsoleHost",
+        "command_line": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-PowerShell/Operational",
+        "opcode": "To be used when operation is just executing a method",
+        "version": 1,
+        "event_id": "4103",
+        "task": "Executing Pipeline",
+        "provider_guid": "{a0c1853b-5c40-4b15-8766-3cf1c58f985a}",
+        "activity_id": "{458d2c95-badf-0001-a6a7-1d6ca7f7da01}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-PowerShell",
+        "user": {
+            "identifier": "S-1-5-21-981878584-487602356-1169203714-500",
+            "domain": "MELD",
+            "name": "LAB Administrator",
+            "type": "User"
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "message": "CommandInvocation(New-LocalUser): \"New-LocalUser\"\nParameterBinding(New-LocalUser): name=\"Name\"; value=\"AdminUser57\"\nParameterBinding(New-LocalUser): name=\"Password\"; value=\"System.Security.SecureString\"\nParameterBinding(New-LocalUser): name=\"FullName\"; value=\"Admin User 57\"\nParameterBinding(New-LocalUser): name=\"Description\"; value=\"Generated Admin User 57\"\n\n\nContext:\n        Severity = Informational\n        Host Name = ConsoleHost\n        Host Version = 5.1.19041.4648\n        Host ID = 9948f59e-516c-4f7b-949d-bbbe67079ed8\n        Host Application = C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\n        Engine Version = 5.1.19041.4648\n        Runspace ID = 5b211d0e-dbc1-45c7-978b-b1c01f12d414\n        Pipeline ID = 10\n        Command Name = New-LocalUser\n        Command Type = Cmdlet\n        Script Name = \n        Command Path = \n        Sequence Number = 396\n        User = MELD\\LAB Administrator\n        Connected User = \n        Shell ID = Microsoft.PowerShell\n\n\nUser Data:\n",
+    "related": {
+        "user": "LAB Administrator"
+    },
+    "powershell": {
+        "process": {
+            "executable_version": "5.1.19041.4648"
+        },
+        "engine": {
+            "version": "5.1.19041.4648"
+        },
+        "runspace_id": "5b211d0e-dbc1-45c7-978b-b1c01f12d414",
+        "pipeline_id": "10",
+        "id": "Microsoft.PowerShell",
+        "command": {
+            "invocation_details": [
+                {
+                    "related_command": "New-LocalUser",
+                    "type": "CommandInvocation",
+                    "value": "\"New-LocalUser\""
+                },
+                {
+                    "related_command": "New-LocalUser",
+                    "name": "\"Name\"",
+                    "type": "ParameterBinding",
+                    "value": "\"AdminUser57\""
+                },
+                {
+                    "related_command": "New-LocalUser",
+                    "name": "\"Password\"",
+                    "type": "ParameterBinding",
+                    "value": "\"System.Security.SecureString\""
+                },
+                {
+                    "related_command": "New-LocalUser",
+                    "name": "\"FullName\"",
+                    "type": "ParameterBinding",
+                    "value": "\"Admin User 57\""
+                },
+                {
+                    "related_command": "New-LocalUser",
+                    "name": "\"Description\"",
+                    "type": "ParameterBinding",
+                    "value": "\"Generated Admin User 57\""
+                }
+            ],
+            "name": "New-LocalUser",
+            "type": "Cmdlet"
+        }
+    },
+    "event": {
+        "sequence": 396,
+        "code": "4103",
+        "provider": "Microsoft-Windows-PowerShell",
+        "kind": "event",
+        "module": "powershell",
+        "action": "Executing Pipeline",
+        "category": [
+            "process"
+        ],
+        "type": [
+            "info"
+        ]
+    },
+    "user": {
+        "domain": "MELD",
+        "name": "LAB Administrator",
+        "id": "S-1-5-21-981878584-487602356-1169203714-500"
+    },
+    "label": 1
+}

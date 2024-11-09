@@ -1,0 +1,49 @@
+{
+    "process": {
+        "name": "setup.exe",
+        "executable": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\setup.exe"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "event_data": {
+            "User": "MELD\\LAB Administrator"
+        },
+        "opcode": "Info",
+        "version": 2,
+        "task": "File created (rule: FileCreate)",
+        "event_id": "11",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "file": {
+        "path": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\VC\\SecurityIssueAnalysis\\python\\lib\\site-packages\\pandas\\tests\\util\\__pycache__\\test_assert_series_equal.cpython-311.pyc",
+        "extension": "pyc",
+        "name": "test_assert_series_equal.cpython-311.pyc",
+        "directory": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\VC\\SecurityIssueAnalysis\\python\\lib\\site-packages\\pandas\\tests\\util\\__pycache__"
+    },
+    "log": {
+        "level": "information"
+    },
+    "event": {
+        "code": "11",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "File created (rule: FileCreate)",
+        "category": [
+            "file"
+        ],
+        "type": [
+            "creation"
+        ]
+    },
+    "message": "File created:\nRuleName: -\nProcessGuid: {d7942c09-ddd8-66cd-a502-000000000900}\nProcessId: 5868\nImage: C:\\Program Files (x86)\\Microsoft Visual Studio\\Installer\\setup.exe\nTargetFilename: C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\VC\\SecurityIssueAnalysis\\python\\lib\\site-packages\\pandas\\tests\\util\\__pycache__\\test_assert_series_equal.cpython-311.pyc\nUser: MELD\\LAB Administrator\n",
+    "label": 0
+}

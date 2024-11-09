@@ -1,0 +1,52 @@
+{
+    "process": {
+        "name": "powershell.exe",
+        "executable": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "event_data": {
+            "GrantedAccess": "0x1fffff",
+            "TargetProcessId": "5192",
+            "SourceUser": "MELD\\LAB Administrator",
+            "TargetImage": "C:\\Temp\\master\\hashdump-master\\lazagne\\laZagne_x64.exe",
+            "CallTrace": "C:\\Windows\\SYSTEM32\\ntdll.dll+9ee74|C:\\Windows\\System32\\KERNELBASE.dll+53815|C:\\Windows\\System32\\KERNELBASE.dll+50856|C:\\Windows\\System32\\KERNEL32.DLL+1cef4|C:\\Windows\\assembly\\NativeImages_v4.0.30319_64\\System\\1be7b2c862a3c414a928391182fb30b9\\System.ni.dll+3850b6|C:\\Windows\\assembly\\NativeImages_v4.0.30319_64\\System\\1be7b2c862a3c414a928391182fb30b9\\System.ni.dll+2c5889|C:\\Windows\\assembly\\NativeImages_v4.0.30319_64\\System\\1be7b2c862a3c414a928391182fb30b9\\System.ni.dll+2c51f9|C:\\Windows\\assembly\\NativeImages_v4.0.30319_64\\System.Manaa57fc8cc#\\6137b796a630b8a7546446a290f57719\\System.Management.Automation.ni.dll+12882b9|C:\\Windows\\assembly\\NativeImages_v4.0.30319_64\\System.Manaa57fc8cc#\\6137b796a630b8a7546446a290f57719\\System.Management.Automation.ni.dll+119e4aa|C:\\Windows\\assembly\\NativeImages_v4.0.30319_64\\System.Manaa57fc8cc#\\6137b796a630b8a7546446a290f57719\\System.Management.Automation.ni.dll+1249b4d|C:\\Windows\\assembly\\NativeImages_v4.0.30319_64\\System.Manaa57fc8cc#\\6137b796a630b8a7546446a290f57719\\System.Management.Automation.ni.dll+124980b|C:\\Windows\\assembly\\NativeImages_v4.0.30319_64\\System.Manaa57fc8cc#\\6137b796a630b8a7546446a290f57719\\System.Management.Automation.ni.dll+131fa8f|UNKNOWN(00007FFAD80A5681)",
+            "TargetProcessGUID": "{d7942c09-ada4-66c5-3002-000000000b00}",
+            "TargetUser": "MELD\\LAB Administrator"
+        },
+        "opcode": "Info",
+        "version": 3,
+        "event_id": "10",
+        "task": "Process accessed (rule: ProcessAccess)",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "rule": {
+        "name": "technique_id=T1055.001,technique_name=Dynamic-link Library Injection"
+    },
+    "message": "Process accessed:\nRuleName: technique_id=T1055.001,technique_name=Dynamic-link Library Injection\nSourceProcessGUID: {d7942c09-ab12-66c5-ae01-000000000b00}\nSourceProcessId: 7016\nSourceThreadId: 3860\nSourceImage: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\nTargetProcessGUID: {d7942c09-ada4-66c5-3002-000000000b00}\nTargetProcessId: 5192\nTargetImage: C:\\Temp\\master\\hashdump-master\\lazagne\\laZagne_x64.exe\nGrantedAccess: 0x1FFFFF\nCallTrace: C:\\Windows\\SYSTEM32\\ntdll.dll+9ee74|C:\\Windows\\System32\\KERNELBASE.dll+53815|C:\\Windows\\System32\\KERNELBASE.dll+50856|C:\\Windows\\System32\\KERNEL32.DLL+1cef4|C:\\Windows\\assembly\\NativeImages_v4.0.30319_64\\System\\1be7b2c862a3c414a928391182fb30b9\\System.ni.dll+3850b6|C:\\Windows\\assembly\\NativeImages_v4.0.30319_64\\System\\1be7b2c862a3c414a928391182fb30b9\\System.ni.dll+2c5889|C:\\Windows\\assembly\\NativeImages_v4.0.30319_64\\System\\1be7b2c862a3c414a928391182fb30b9\\System.ni.dll+2c51f9|C:\\Windows\\assembly\\NativeImages_v4.0.30319_64\\System.Manaa57fc8cc#\\6137b796a630b8a7546446a290f57719\\System.Management.Automation.ni.dll+12882b9|C:\\Windows\\assembly\\NativeImages_v4.0.30319_64\\System.Manaa57fc8cc#\\6137b796a630b8a7546446a290f57719\\System.Management.Automation.ni.dll+119e4aa|C:\\Windows\\assembly\\NativeImages_v4.0.30319_64\\System.Manaa57fc8cc#\\6137b796a630b8a7546446a290f57719\\System.Management.Automation.ni.dll+1249b4d|C:\\Windows\\assembly\\NativeImages_v4.0.30319_64\\System.Manaa57fc8cc#\\6137b796a630b8a7546446a290f57719\\System.Management.Automation.ni.dll+124980b|C:\\Windows\\assembly\\NativeImages_v4.0.30319_64\\System.Manaa57fc8cc#\\6137b796a630b8a7546446a290f57719\\System.Management.Automation.ni.dll+131fa8f|UNKNOWN(00007FFAD80A5681)\nSourceUser: MELD\\LAB Administrator\nTargetUser: MELD\\LAB Administrator\n",
+    "event": {
+        "code": "10",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "Process accessed (rule: ProcessAccess)",
+        "type": [
+            "access"
+        ],
+        "category": [
+            "process"
+        ]
+    },
+    "label": 1
+}

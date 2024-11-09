@@ -1,0 +1,83 @@
+{
+    "process": {
+        "pe": {
+            "imphash": "7383db5ef238aaaf24025f71e0342957"
+        },
+        "name": "laZagne_x64.exe",
+        "executable": "C:\\Temp\\master\\hashdump-master\\lazagne\\laZagne_x64.exe",
+        "hash": {
+            "sha1": "9eaf1151ca6292132554dd53a1a77b80bb7de9c1",
+            "sha256": "d712b72e9b9b86486f352c42203fb2f9883780ea102793cc389b4f6254d660ab",
+            "md5": "5ed99afcf2ddd45adf10e8bfa037def1"
+        }
+    },
+    "winlog": {
+        "task": "File Delete archived (rule: FileDelete)",
+        "event_id": "23",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "api": "wineventlog",
+        "opcode": "Info",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "version": 5,
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "sysmon": {
+        "file": {
+            "archived": true,
+            "is_executable": true
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "rule": {
+        "name": "Executables"
+    },
+    "message": "File Delete archived:\nRuleName: Executables\nProcessGuid: {d7942c09-ad94-66c5-2802-000000000b00}\nProcessId: 7324\nUser: MELD\\LAB Administrator\nImage: C:\\Temp\\master\\hashdump-master\\lazagne\\laZagne_x64.exe\nTargetFilename: C:\\Users\\LABADM~1\\AppData\\Local\\Temp\\_MEI73242\\win32pipe.pyd\nHashes: SHA1=9EAF1151CA6292132554DD53A1A77B80BB7DE9C1,MD5=5ED99AFCF2DDD45ADF10E8BFA037DEF1,SHA256=D712B72E9B9B86486F352C42203FB2F9883780EA102793CC389B4F6254D660AB,IMPHASH=7383DB5EF238AAAF24025F71E0342957\nIsExecutable: true\nArchived: true\n",
+    "file": {
+        "path": "C:\\Users\\LABADM~1\\AppData\\Local\\Temp\\_MEI73242\\win32pipe.pyd",
+        "extension": "pyd",
+        "name": "win32pipe.pyd",
+        "directory": "C:\\Users\\LABADM~1\\AppData\\Local\\Temp\\_MEI73242"
+    },
+    "related": {
+        "user": "LAB Administrator",
+        "hash": [
+            "9eaf1151ca6292132554dd53a1a77b80bb7de9c1",
+            "5ed99afcf2ddd45adf10e8bfa037def1",
+            "d712b72e9b9b86486f352c42203fb2f9883780ea102793cc389b4f6254d660ab",
+            "7383db5ef238aaaf24025f71e0342957"
+        ]
+    },
+    "event": {
+        "code": "23",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "File Delete archived (rule: FileDelete)",
+        "category": [
+            "file"
+        ],
+        "type": [
+            "deletion"
+        ]
+    },
+    "user": {
+        "domain": "MELD",
+        "name": "LAB Administrator",
+        "id": "S-1-5-18"
+    },
+    "hash": {
+        "sha1": "9eaf1151ca6292132554dd53a1a77b80bb7de9c1",
+        "imphash": "7383db5ef238aaaf24025f71e0342957",
+        "sha256": "d712b72e9b9b86486f352c42203fb2f9883780ea102793cc389b4f6254d660ab",
+        "md5": "5ed99afcf2ddd45adf10e8bfa037def1"
+    },
+    "label": 1
+}

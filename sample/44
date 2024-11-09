@@ -1,0 +1,67 @@
+{
+    "process": {
+        "name": "Explorer.EXE",
+        "executable": "C:\\Windows\\Explorer.EXE"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "event_data": {
+            "Contents": "-",
+            "User": "MELD\\LAB Administrator"
+        },
+        "opcode": "Info",
+        "version": 2,
+        "event_id": "15",
+        "task": "File stream created (rule: FileCreateStreamHash)",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "message": "File stream created:\nRuleName: -\nProcessGuid: {c6555c30-509e-66c4-4e01-000000001300}\nProcessId: 6584\nImage: C:\\Windows\\Explorer.EXE\nTargetFilename: C:\\Users\\LAB Administrator\\Desktop\\pypykatz-main\\pypykatz\\registry\\security\\security.py\nHash: SHA1=0C642A95E2149E56F98BA21F18EE232A003A9AC7,MD5=9EFCBF25145F0B0C0B9B7AF7E8CAD3FB,SHA256=306039FC8864BC0E95DFDF7D465EE98536DD0E98BE811758E95F0CCFF160B785,IMPHASH=00000000000000000000000000000000\nContents: -\nUser: MELD\\LAB Administrator\n",
+    "file": {
+        "path": "C:\\Users\\LAB Administrator\\Desktop\\pypykatz-main\\pypykatz\\registry\\security\\security.py",
+        "extension": "py",
+        "name": "security.py",
+        "directory": "C:\\Users\\LAB Administrator\\Desktop\\pypykatz-main\\pypykatz\\registry\\security",
+        "hash": {
+            "sha1": "0c642a95e2149e56f98ba21f18ee232a003a9ac7",
+            "sha256": "306039fc8864bc0e95dfdf7d465ee98536dd0e98be811758e95f0ccff160b785",
+            "md5": "9efcbf25145f0b0c0b9b7af7e8cad3fb"
+        }
+    },
+    "related": {
+        "hash": [
+            "0c642a95e2149e56f98ba21f18ee232a003a9ac7",
+            "9efcbf25145f0b0c0b9b7af7e8cad3fb",
+            "306039fc8864bc0e95dfdf7d465ee98536dd0e98be811758e95f0ccff160b785"
+        ]
+    },
+    "event": {
+        "code": "15",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "File stream created (rule: FileCreateStreamHash)",
+        "category": [
+            "file"
+        ],
+        "type": [
+            "access"
+        ]
+    },
+    "hash": {
+        "sha1": "0c642a95e2149e56f98ba21f18ee232a003a9ac7",
+        "sha256": "306039fc8864bc0e95dfdf7d465ee98536dd0e98be811758e95f0ccff160b785",
+        "md5": "9efcbf25145f0b0c0b9b7af7e8cad3fb"
+    },
+    "label": 1
+}

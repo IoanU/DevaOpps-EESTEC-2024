@@ -1,0 +1,70 @@
+{
+    "process": {
+        "name": "Explorer.EXE",
+        "executable": "C:\\Windows\\Explorer.EXE"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "event_data": {
+            "Contents": "[ZoneTransfer]  ZoneId=3  ReferrerUrl=C:\\Users\\LAB Administrator\\Downloads\\pypykatz-main.zip  ",
+            "User": "MELD\\LAB Administrator"
+        },
+        "opcode": "Info",
+        "version": 2,
+        "task": "File stream created (rule: FileCreateStreamHash)",
+        "event_id": "15",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "rule": {
+        "name": "technique_id=T1189,technique_name=Drive-by Compromise"
+    },
+    "message": "File stream created:\nRuleName: technique_id=T1189,technique_name=Drive-by Compromise\nProcessGuid: {c6555c30-509e-66c4-4e01-000000001300}\nProcessId: 6584\nImage: C:\\Windows\\Explorer.EXE\nTargetFilename: C:\\Users\\LAB Administrator\\Desktop\\pypykatz-main\\pypykatz\\lsadecryptor\\packages\\kerberos\\__init__.py:Zone.Identifier\nHash: SHA1=60E1127E8AE0051F8033B19D7F21F299042EFFCD,MD5=CCDD674C57BDF74AC0EAB9DB00B84DDC,SHA256=4704841F7BF40B48DB63C9D69FAD76C7686AFE80C9F637A5CAEFC3B24EAED295,IMPHASH=00000000000000000000000000000000\nContents: [ZoneTransfer]  ZoneId=3  ReferrerUrl=C:\\Users\\LAB Administrator\\Downloads\\pypykatz-main.zip  \nUser: MELD\\LAB Administrator\n",
+    "file": {
+        "path": "C:\\Users\\LAB Administrator\\Desktop\\pypykatz-main\\pypykatz\\lsadecryptor\\packages\\kerberos\\__init__.py:Zone.Identifier",
+        "extension": "Identifier",
+        "name": "__init__.py:Zone.Identifier",
+        "directory": "C:\\Users\\LAB Administrator\\Desktop\\pypykatz-main\\pypykatz\\lsadecryptor\\packages\\kerberos",
+        "hash": {
+            "sha1": "60e1127e8ae0051f8033b19d7f21f299042effcd",
+            "sha256": "4704841f7bf40b48db63c9d69fad76c7686afe80c9f637a5caefc3b24eaed295",
+            "md5": "ccdd674c57bdf74ac0eab9db00b84ddc"
+        }
+    },
+    "related": {
+        "hash": [
+            "60e1127e8ae0051f8033b19d7f21f299042effcd",
+            "ccdd674c57bdf74ac0eab9db00b84ddc",
+            "4704841f7bf40b48db63c9d69fad76c7686afe80c9f637a5caefc3b24eaed295"
+        ]
+    },
+    "event": {
+        "code": "15",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "File stream created (rule: FileCreateStreamHash)",
+        "category": [
+            "file"
+        ],
+        "type": [
+            "access"
+        ]
+    },
+    "hash": {
+        "sha1": "60e1127e8ae0051f8033b19d7f21f299042effcd",
+        "sha256": "4704841f7bf40b48db63c9d69fad76c7686afe80c9f637a5caefc3b24eaed295",
+        "md5": "ccdd674c57bdf74ac0eab9db00b84ddc"
+    },
+    "label": 1
+}

@@ -1,0 +1,52 @@
+{
+    "process": {
+        "name": "OneDriveSetup.exe",
+        "executable": "C:\\Users\\LAB Administrator\\AppData\\Local\\Microsoft\\OneDrive\\Update\\OneDriveSetup.exe"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "event_data": {
+            "GrantedAccess": "0x40",
+            "TargetProcessId": "4016",
+            "SourceUser": "MELD\\LAB Administrator",
+            "TargetImage": "C:\\Windows\\Explorer.EXE",
+            "CallTrace": "C:\\Windows\\SYSTEM32\\ntdll.dll+9da24|C:\\Windows\\System32\\wow64.dll+10a15|C:\\Windows\\System32\\wow64.dll+90da|C:\\Windows\\System32\\wow64cpu.dll+17c3|C:\\Windows\\System32\\wow64cpu.dll+11b9|C:\\Windows\\System32\\wow64.dll+3989|C:\\Windows\\System32\\wow64.dll+337d|C:\\Windows\\SYSTEM32\\ntdll.dll+76099|C:\\Windows\\SYSTEM32\\ntdll.dll+75c83|C:\\Windows\\SYSTEM32\\ntdll.dll+75c2e|C:\\Windows\\SYSTEM32\\ntdll.dll+7326c(wow64)|C:\\Windows\\System32\\KERNELBASE.dll+1107f8(wow64)|C:\\Windows\\System32\\shcore.dll+2571c(wow64)|C:\\Windows\\System32\\shcore.dll+256fe(wow64)|C:\\Windows\\System32\\shcore.dll+2ba9d(wow64)|C:\\Windows\\System32\\shcore.dll+2b7c2(wow64)|C:\\Windows\\System32\\shcore.dll+2b78f(wow64)|C:\\Windows\\System32\\shcore.dll+2b6d3(wow64)|C:\\Windows\\SYSTEM32\\windows.storage.dll+db148(wow64)|C:\\Windows\\SYSTEM32\\windows.storage.dll+daf5b(wow64)|C:\\Windows\\SYSTEM32\\windows.storage.dll+db474(wow64)|C:\\Windows\\System32\\shcore.dll+38324(wow64)|C:\\Windows\\System32\\shcore.dll+382b5(wow64)|C:\\Users\\LAB Administrator\\AppData\\Local\\Microsoft\\OneDrive\\Update\\OneDriveSetup.exe+282787",
+            "TargetProcessGUID": "{b1b2c0c2-8038-6697-7b02-000000000600}",
+            "TargetUser": "MELD\\LAB Administrator"
+        },
+        "opcode": "Info",
+        "version": 3,
+        "event_id": "10",
+        "task": "Process accessed (rule: ProcessAccess)",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "rule": {
+        "name": "technique_id=T1036,technique_name=Masquerading"
+    },
+    "message": "Process accessed:\nRuleName: technique_id=T1036,technique_name=Masquerading\nSourceProcessGUID: {b1b2c0c2-80af-6697-c202-000000000600}\nSourceProcessId: 9636\nSourceThreadId: 4484\nSourceImage: C:\\Users\\LAB Administrator\\AppData\\Local\\Microsoft\\OneDrive\\Update\\OneDriveSetup.exe\nTargetProcessGUID: {b1b2c0c2-8038-6697-7b02-000000000600}\nTargetProcessId: 4016\nTargetImage: C:\\Windows\\Explorer.EXE\nGrantedAccess: 0x40\nCallTrace: C:\\Windows\\SYSTEM32\\ntdll.dll+9da24|C:\\Windows\\System32\\wow64.dll+10a15|C:\\Windows\\System32\\wow64.dll+90da|C:\\Windows\\System32\\wow64cpu.dll+17c3|C:\\Windows\\System32\\wow64cpu.dll+11b9|C:\\Windows\\System32\\wow64.dll+3989|C:\\Windows\\System32\\wow64.dll+337d|C:\\Windows\\SYSTEM32\\ntdll.dll+76099|C:\\Windows\\SYSTEM32\\ntdll.dll+75c83|C:\\Windows\\SYSTEM32\\ntdll.dll+75c2e|C:\\Windows\\SYSTEM32\\ntdll.dll+7326c(wow64)|C:\\Windows\\System32\\KERNELBASE.dll+1107f8(wow64)|C:\\Windows\\System32\\shcore.dll+2571c(wow64)|C:\\Windows\\System32\\shcore.dll+256fe(wow64)|C:\\Windows\\System32\\shcore.dll+2ba9d(wow64)|C:\\Windows\\System32\\shcore.dll+2b7c2(wow64)|C:\\Windows\\System32\\shcore.dll+2b78f(wow64)|C:\\Windows\\System32\\shcore.dll+2b6d3(wow64)|C:\\Windows\\SYSTEM32\\windows.storage.dll+db148(wow64)|C:\\Windows\\SYSTEM32\\windows.storage.dll+daf5b(wow64)|C:\\Windows\\SYSTEM32\\windows.storage.dll+db474(wow64)|C:\\Windows\\System32\\shcore.dll+38324(wow64)|C:\\Windows\\System32\\shcore.dll+382b5(wow64)|C:\\Users\\LAB Administrator\\AppData\\Local\\Microsoft\\OneDrive\\Update\\OneDriveSetup.exe+282787\nSourceUser: MELD\\LAB Administrator\nTargetUser: MELD\\LAB Administrator\n",
+    "event": {
+        "code": "10",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "Process accessed (rule: ProcessAccess)",
+        "category": [
+            "process"
+        ],
+        "type": [
+            "access"
+        ]
+    },
+    "label": 1
+}
