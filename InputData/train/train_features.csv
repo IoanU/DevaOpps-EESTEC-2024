@@ -1,1 +1,135 @@
-
+process_name,event_id,event_channel,user_identifier,rule_name,log_level,event_category,event_type,call_trace_length,label
+pycharm-community-2024.2.0.1.exe,2,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1070.006,technique_name=Timestomp",information,file,change,0,0
+pycharm-professional-2024.2.0.1.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
+,800,Windows PowerShell,,,information,process,info,0,0
+,5447,Security,,,information,,,0,0
+,4103,Microsoft-Windows-PowerShell/Operational,S-1-5-21-981878584-487602356-1169203714-500,,information,process,info,0,0
+svchost.exe,12,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,0
+Explorer.EXE,15,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,access,0,1
+WaSecAgentProv.exe,12,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1553.004,technique_name=Install Root Certificate",information,"configuration,registry",change,0,0
+,4103,Microsoft-Windows-PowerShell/Operational,S-1-5-21-981878584-487602356-1169203714-500,,information,process,info,0,0
+MsMpEng.exe,12,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,0
+,4103,Microsoft-Windows-PowerShell/Operational,S-1-5-21-981878584-487602356-1169203714-500,,information,process,info,0,0
+,4103,Microsoft-Windows-PowerShell/Operational,S-1-5-21-981878584-487602356-1169203714-500,,information,process,info,0,1
+mscorsvw.exe,4688,Security,,,information,process,start,0,0
+setup.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
+,5145,Security,,,information,,,0,1
+msiexec.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
+,5449,Security,,,information,,,0,0
+,5447,Security,,,information,,,0,0
+svchost.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1574.010,technique_name=Services File Permissions Weakness",information,file,creation,0,0
+,800,Windows PowerShell,,,information,process,info,0,0
+pycharm-professional-2024.2.0.1.exe,2,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1070.006,technique_name=Timestomp",information,file,change,0,0
+laZagne_x64.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1036,technique_name=Masquerading",information,process,access,24,1
+svchost.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
+SearchApp.exe,7,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,process,change,0,0
+Explorer.EXE,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,1
+pycharm-professional-2024.2.0.1.exe,2,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1070.006,technique_name=Timestomp",information,file,change,0,0
+pycharm-community-2024.2.0.1.exe,2,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1070.006,technique_name=Timestomp",information,file,change,0,0
+laZagne_x64.exe,23,Microsoft-Windows-Sysmon/Operational,S-1-5-18,Executables,information,file,deletion,0,1
+msiexec.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1574.010,technique_name=Services File Permissions Weakness",information,file,creation,0,0
+Explorer.EXE,15,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1189,technique_name=Drive-by Compromise",information,file,access,0,1
+,5447,Security,,,information,,,0,0
+,800,Windows PowerShell,,,information,process,info,0,0
+svchost.exe,12,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1053,technique_name=Scheduled Task",information,"configuration,registry",change,0,0
+,800,Windows PowerShell,,,information,process,info,0,0
+,5447,Security,,,information,,,0,0
+laZagne_x64.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1036,technique_name=Masquerading",information,process,access,24,1
+,5447,Security,,,information,,,0,0
+svchost.exe,12,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1053,technique_name=Scheduled Task",information,"configuration,registry",change,0,0
+,5447,Security,,,information,,,0,0
+PChunter64.exe,13,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,1
+,5447,Security,,,information,,,0,0
+nslookup.exe,4689,Security,,,information,process,end,0,1
+setup.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
+Explorer.EXE,15,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,access,0,1
+Explorer.EXE,15,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1189,technique_name=Drive-by Compromise",information,file,access,0,1
+pycharm-professional-2024.2.0.1.exe,2,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1070.006,technique_name=Timestomp",information,file,change,0,0
+Explorer.EXE,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,1
+,800,Windows PowerShell,,,information,process,info,0,1
+setup.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
+,4957,Security,,,information,,,0,0
+svchost.exe,13,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,0
+lsass.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1574.010,technique_name=Services File Permissions Weakness",information,file,creation,0,1
+svchost.exe,13,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,0
+laZagne_x64.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1036,technique_name=Masquerading",information,process,access,24,1
+services.exe,12,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,0
+,4657,Security,,,information,,,0,0
+mscorsvw.exe,7,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1574.002,technique_name=DLL Side-Loading",information,process,change,0,0
+pycharm-professional-2024.2.0.1.exe,2,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1070.006,technique_name=Timestomp",information,file,change,0,0
+PChunter64.exe,13,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,"configuration,registry",change,0,1
+,4103,Microsoft-Windows-PowerShell/Operational,S-1-5-21-981878584-487602356-1169203714-500,,information,process,info,0,0
+,5447,Security,,,information,,,0,0
+reg.exe,1,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,process,"start,process_start",0,1
+laZagne_x64.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1036,technique_name=Masquerading",information,process,access,24,1
+laZagne_x64.exe,23,Microsoft-Windows-Sysmon/Operational,S-1-5-18,Executables,information,file,deletion,0,1
+pycharm-community-2024.2.0.1.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
+msiexec.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
+,800,Windows PowerShell,,,information,process,info,0,1
+svchost.exe,12,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,0
+,255,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,error,,,0,0
+python.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
+powershell.exe,12,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1003,technique_name=Credential Dumping",information,"configuration,registry",change,0,0
+Explorer.EXE,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,1
+,5145,Security,,,information,,,0,0
+Explorer.EXE,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,1
+svchost.exe,12,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,0
+OneDriveSetup.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1036,technique_name=Masquerading",information,process,access,24,1
+,800,Windows PowerShell,,,information,process,info,0,0
+,255,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,error,,,0,0
+,5447,Security,,,information,,,0,0
+svchost.exe,12,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,0
+Explorer.EXE,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,1
+,5447,Security,,,information,,,0,0
+,4103,Microsoft-Windows-PowerShell/Operational,S-1-5-21-981878584-487602356-1169203714-500,,information,process,info,0,0
+pycharm-community-2024.2.0.1.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
+,800,Windows PowerShell,,,information,process,info,0,0
+powershell.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1055.001,technique_name=Dynamic-link Library Injection",information,process,access,13,1
+,5449,Security,,,information,,,0,0
+pycharm-professional-2024.2.0.1.exe,2,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1070.006,technique_name=Timestomp",information,file,change,0,0
+msiexec.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
+PsExec.exe,5,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,process,"end,process_end",0,1
+,4664,Security,,,information,,,0,0
+pycharm-professional-2024.2.0.1.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
+,800,Windows PowerShell,,,information,process,info,0,0
+pycharm-community-2024.2.0.1.exe,2,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1070.006,technique_name=Timestomp",information,file,change,0,0
+msiexec.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
+lsass.exe,22,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,network,"connection,protocol,info",0,1
+svchost.exe,12,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,0
+OneDriveSetup.exe,23,Microsoft-Windows-Sysmon/Operational,S-1-5-18,Executables,information,file,deletion,0,1
+,10000,Application,S-1-5-21-981878584-487602356-1169203714-500,,information,,,0,0
+pycharm-professional-2024.2.0.1.exe,2,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1070.006,technique_name=Timestomp",information,file,change,0,0
+mscorsvw.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1574.010,technique_name=Services File Permissions Weakness",information,file,creation,0,0
+pypykatz.exe,7,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1574.002,technique_name=DLL Side-Loading",information,process,change,0,1
+Explorer.EXE,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,1
+msiexec.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1574.010,technique_name=Services File Permissions Weakness",information,file,creation,0,0
+python.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
+,5145,Security,,,information,,,0,1
+svchost.exe,13,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,0
+,4634,Security,,,information,authentication,end,0,0
+svchost.exe,12,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,0
+NGenTask.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1055.001,technique_name=Dynamic-link Library Injection",information,process,access,24,0
+pycharm-professional-2024.2.0.1.exe,2,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1070.006,technique_name=Timestomp",information,file,change,0,0
+Explorer.EXE,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,1
+-,4624,Security,,,information,authentication,start,0,0
+,4104,Microsoft-Windows-PowerShell/Operational,S-1-5-21-981878584-487602356-1169203714-500,,verbose,process,info,0,1
+cmd.exe,4688,Security,,,information,process,start,0,1
+,4664,Security,,,information,,,0,0
+mscorsvw.exe,4689,Security,,,information,process,end,0,0
+pycharm-community-2024.2.0.1.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0
+services.exe,13,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1543,technique_name=Service Creation",information,"configuration,registry",change,0,0
+,800,Windows PowerShell,,,information,process,info,0,0
+Explorer.EXE,12,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,"configuration,registry",change,0,0
+WinRAR.exe,4689,Security,,,information,process,end,0,0
+nslookup.exe,4688,Security,,,information,process,start,0,1
+Explorer.EXE,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,1
+,5447,Security,,,information,,,0,0
+,800,Windows PowerShell,,,information,process,info,0,0
+laZagne_x64.exe,10,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1036,technique_name=Masquerading",information,process,access,24,1
+,5447,Security,,,information,,,0,0
+,5449,Security,,,information,,,0,0
+msiexec.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,"technique_id=T1574.010,technique_name=Services File Permissions Weakness",information,file,creation,0,0
+,255,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,error,,,0,0
+,4946,Security,,,information,,,0,0
+,4664,Security,,,information,,,0,0
+setup.exe,11,Microsoft-Windows-Sysmon/Operational,S-1-5-18,,information,file,creation,0,0

@@ -1,0 +1,61 @@
+{
+    "process": {
+        "name": "lsass.exe",
+        "executable": "C:\\Windows\\System32\\lsass.exe"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "event_data": {
+            "User": "NT AUTHORITY\\SYSTEM"
+        },
+        "opcode": "Info",
+        "version": 5,
+        "task": "Dns query (rule: DnsQuery)",
+        "event_id": "22",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "sysmon": {
+        "dns": {
+            "status": "DNS_ERROR_RCODE_NAME_ERROR"
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "dns": {
+        "question": {
+            "registered_domain": "_msdcs.ws2",
+            "top_level_domain": "ws2",
+            "name": "_ldap._tcp.dc._msdcs.ws2",
+            "subdomain": "_ldap._tcp.dc"
+        }
+    },
+    "message": "Dns query:\nRuleName: -\nProcessGuid: {d7942c09-2593-66b2-0c00-000000000600}\nProcessId: 756\nQueryName: _ldap._tcp.dc._msdcs.ws2\nQueryStatus: 9003\nQueryResults: -\nImage: C:\\Windows\\System32\\lsass.exe\nUser: NT AUTHORITY\\SYSTEM\n",
+    "network": {
+        "protocol": "dns"
+    },
+    "event": {
+        "code": "22",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "Dns query (rule: DnsQuery)",
+        "category": [
+            "network"
+        ],
+        "type": [
+            "connection",
+            "protocol",
+            "info"
+        ]
+    },
+    "label": 1
+}

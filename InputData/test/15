@@ -1,0 +1,70 @@
+{
+    "process": {
+        "name": "Explorer.EXE",
+        "executable": "C:\\Windows\\Explorer.EXE"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "event_data": {
+            "Contents": "[ZoneTransfer]  ZoneId=3  ReferrerUrl=C:\\Users\\LAB Administrator\\Downloads\\mimikatz-master.zip  ",
+            "User": "MELD\\LAB Administrator"
+        },
+        "opcode": "Info",
+        "version": 2,
+        "task": "File stream created (rule: FileCreateStreamHash)",
+        "event_id": "15",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "rule": {
+        "name": "technique_id=T1189,technique_name=Drive-by Compromise"
+    },
+    "message": "File stream created:\nRuleName: technique_id=T1189,technique_name=Drive-by Compromise\nProcessGuid: {c6555c30-97cb-66b0-7801-000000000700}\nProcessId: 8168\nImage: C:\\Windows\\Explorer.EXE\nTargetFilename: C:\\Users\\LAB Administrator\\Desktop\\mimikatz-master\\debian\\control:Zone.Identifier\nHash: SHA1=11C707B0019DDBCC204B85D5A50C14610B86C5F2,MD5=63AF790009BC0A473A03745545872082,SHA256=0861A7D0D237F9DEFFAAA29F57E59F75EC6E798BC3AD9C06AFD4DB820EE14450,IMPHASH=00000000000000000000000000000000\nContents: [ZoneTransfer]  ZoneId=3  ReferrerUrl=C:\\Users\\LAB Administrator\\Downloads\\mimikatz-master.zip  \nUser: MELD\\LAB Administrator\n",
+    "file": {
+        "path": "C:\\Users\\LAB Administrator\\Desktop\\mimikatz-master\\debian\\control:Zone.Identifier",
+        "extension": "Identifier",
+        "name": "control:Zone.Identifier",
+        "directory": "C:\\Users\\LAB Administrator\\Desktop\\mimikatz-master\\debian",
+        "hash": {
+            "sha1": "11c707b0019ddbcc204b85d5a50c14610b86c5f2",
+            "sha256": "0861a7d0d237f9deffaaa29f57e59f75ec6e798bc3ad9c06afd4db820ee14450",
+            "md5": "63af790009bc0a473a03745545872082"
+        }
+    },
+    "related": {
+        "hash": [
+            "11c707b0019ddbcc204b85d5a50c14610b86c5f2",
+            "63af790009bc0a473a03745545872082",
+            "0861a7d0d237f9deffaaa29f57e59f75ec6e798bc3ad9c06afd4db820ee14450"
+        ]
+    },
+    "event": {
+        "code": "15",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "File stream created (rule: FileCreateStreamHash)",
+        "type": [
+            "access"
+        ],
+        "category": [
+            "file"
+        ]
+    },
+    "hash": {
+        "sha1": "11c707b0019ddbcc204b85d5a50c14610b86c5f2",
+        "sha256": "0861a7d0d237f9deffaaa29f57e59f75ec6e798bc3ad9c06afd4db820ee14450",
+        "md5": "63af790009bc0a473a03745545872082"
+    },
+    "label": 1
+}

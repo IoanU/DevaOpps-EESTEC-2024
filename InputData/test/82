@@ -1,0 +1,49 @@
+{
+    "process": {
+        "name": "pycharm-community-2024.2.0.1.exe",
+        "executable": "C:\\Users\\LAB Administrator\\Downloads\\pycharm-community-2024.2.0.1.exe"
+    },
+    "file": {
+        "path": "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.2.0.1\\plugins\\python-ce\\helpers\\third_party\\thriftpy\\_shaded_thriftpy\\contrib\\aio\\__init__.py",
+        "extension": "py",
+        "name": "__init__.py",
+        "directory": "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.2.0.1\\plugins\\python-ce\\helpers\\third_party\\thriftpy\\_shaded_thriftpy\\contrib\\aio"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "event_data": {
+            "User": "MELD\\LAB Administrator"
+        },
+        "opcode": "Info",
+        "version": 2,
+        "event_id": "11",
+        "task": "File created (rule: FileCreate)",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "event": {
+        "code": "11",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "File created (rule: FileCreate)",
+        "category": [
+            "file"
+        ],
+        "type": [
+            "creation"
+        ]
+    },
+    "message": "File created:\nRuleName: -\nProcessGuid: {074624d0-d6e4-66cd-d005-000000000700}\nProcessId: 2728\nImage: C:\\Users\\LAB Administrator\\Downloads\\pycharm-community-2024.2.0.1.exe\nTargetFilename: C:\\Program Files\\JetBrains\\PyCharm Community Edition 2024.2.0.1\\plugins\\python-ce\\helpers\\third_party\\thriftpy\\_shaded_thriftpy\\contrib\\aio\\__init__.py\nUser: MELD\\LAB Administrator\n",
+    "label": 0
+}

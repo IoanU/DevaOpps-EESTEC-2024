@@ -1,0 +1,56 @@
+{
+    "registry": {
+        "hive": "HKLM",
+        "path": "HKLM\\System\\CurrentControlSet\\Services\\mpssvc\\Parameters\\AppCs\\AppCs\\S-1-15-2-4153522205-3718366397-1353898457-1332184198-1210887116-3116787857-2103916698S-1-5-21-981878584-487602356-1169203714-500",
+        "value": "S-1-15-2-4153522205-3718366397-1353898457-1332184198-1210887116-3116787857-2103916698S-1-5-21-981878584-487602356-1169203714-500",
+        "key": "System\\CurrentControlSet\\Services\\mpssvc\\Parameters\\AppCs\\AppCs\\S-1-15-2-4153522205-3718366397-1353898457-1332184198-1210887116-3116787857-2103916698S-1-5-21-981878584-487602356-1169203714-500"
+    },
+    "process": {
+        "name": "svchost.exe",
+        "executable": "C:\\Windows\\system32\\svchost.exe"
+    },
+    "winlog": {
+        "channel": "Microsoft-Windows-Sysmon/Operational",
+        "event_data": {
+            "Details": "v2.30|AppPkgId=S-1-15-2-4153522205-3718366397-1353898457-1332184198-1210887116-3116787857-2103916698|LUOwn=S-1-5-21-981878584-487602356-1169203714-500|C=S-1-15-3-1|C=S-1-15-3-2|C=S-1-15-3-3|C=S-1-15-3-4|C=S-1-15-3-5|C=S-1-15-3-4153522205-3718366397-1353898457-1332184198-1210887116-3116787857-2103916698|M=microsoft.xboxapp_8wekyb3d8bbwe|Name=Xbox|Desc=Xbox|D=C:\\Program Files\\WindowsApps\\Microsoft.XboxApp_48.49.31001.0_x64__8wekyb3d8bbwe\\|PFN=Microsoft.XboxApp_48.49.31001.0_x64__8wekyb3d8bbwe|",
+            "User": "NT AUTHORITY\\LOCAL SERVICE",
+            "EventType": "SetValue",
+            "TargetObject": "HKLM\\System\\CurrentControlSet\\Services\\mpssvc\\Parameters\\AppCs\\AppCs\\S-1-15-2-4153522205-3718366397-1353898457-1332184198-1210887116-3116787857-2103916698S-1-5-21-981878584-487602356-1169203714-500"
+        },
+        "opcode": "Info",
+        "version": 2,
+        "task": "Registry value set (rule: RegistryEvent)",
+        "event_id": "13",
+        "provider_guid": "{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+        "api": "wineventlog",
+        "provider_name": "Microsoft-Windows-Sysmon",
+        "user": {
+            "identifier": "S-1-5-18",
+            "domain": "NT AUTHORITY",
+            "name": "SYSTEM",
+            "type": "User"
+        }
+    },
+    "log": {
+        "level": "information"
+    },
+    "rule": {
+        "name": "technique_id=T1543,technique_name=Service Creation"
+    },
+    "message": "Registry value set:\nRuleName: technique_id=T1543,technique_name=Service Creation\nEventType: SetValue\nProcessGuid: {c6555c30-c613-66cd-2700-000000000600}\nProcessId: 1700\nImage: C:\\Windows\\system32\\svchost.exe\nTargetObject: HKLM\\System\\CurrentControlSet\\Services\\mpssvc\\Parameters\\AppCs\\AppCs\\S-1-15-2-4153522205-3718366397-1353898457-1332184198-1210887116-3116787857-2103916698S-1-5-21-981878584-487602356-1169203714-500\nDetails: v2.30|AppPkgId=S-1-15-2-4153522205-3718366397-1353898457-1332184198-1210887116-3116787857-2103916698|LUOwn=S-1-5-21-981878584-487602356-1169203714-500|C=S-1-15-3-1|C=S-1-15-3-2|C=S-1-15-3-3|C=S-1-15-3-4|C=S-1-15-3-5|C=S-1-15-3-4153522205-3718366397-1353898457-1332184198-1210887116-3116787857-2103916698|M=microsoft.xboxapp_8wekyb3d8bbwe|Name=Xbox|Desc=Xbox|D=C:\\Program Files\\WindowsApps\\Microsoft.XboxApp_48.49.31001.0_x64__8wekyb3d8bbwe\\|PFN=Microsoft.XboxApp_48.49.31001.0_x64__8wekyb3d8bbwe|\nUser: NT AUTHORITY\\LOCAL SERVICE\n",
+    "event": {
+        "code": "13",
+        "provider": "Microsoft-Windows-Sysmon",
+        "kind": "event",
+        "module": "sysmon",
+        "action": "Registry value set (rule: RegistryEvent)",
+        "type": [
+            "change"
+        ],
+        "category": [
+            "configuration",
+            "registry"
+        ]
+    },
+    "label": 0
+}

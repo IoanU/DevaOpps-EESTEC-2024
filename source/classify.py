@@ -2,35 +2,40 @@ import os
 import pandas as pd
 from joblib import load
 from utils import load_json, save_json
-from extract_features import extract_features  # Reuse the feature extraction function
+from extract_features import extract_features
 
 def main():
-    # Load the trained model
-    model_path = "../source/model/trained_model.pkl"
-    model = load(model_path)
-    
-    # Directory containing test files
-    test_dir = "../InputData/test"
+    model_path = "/home/matei/Repositories/DevaOpps/source/model/trained_model.pkl"
+    columns_path = "/home/matei/Repositories/DevaOpps/source/model/feature_columns.pkl"
+    test_dir = "/home/matei/Repositories/DevaOpps/InputData/test"
+    output_path = "/home/matei/Repositories/DevaOpps/output/labels.json"
     predictions = {}
 
-    # Process and classify each test file
+    # Load model and columns
+    model = load(model_path)
+    feature_columns = load(columns_path)
+    print("Model and feature columns loaded successfully.")
+
     for filename in os.listdir(test_dir):
-        if filename.endswith(".json"):
-            file_path = os.path.join(test_dir, filename)
-            
-            # Extract features for the test file
+        file_path = os.path.join(test_dir, filename)
+        if os.path.isfile(file_path):
             features = extract_features(file_path)
-            features_df = pd.DataFrame([features])  # Convert to DataFrame for model input
+            features_df = pd.DataFrame([features])
 
-            # Predict label and store result
-            predicted_label = model.predict(features_df)[0]
-            predictions[filename] = int(predicted_label)  # Convert to int for JSON serialization
+            # Apply one-hot encoding and align columns
+            features_encoded = pd.get_dummies(features_df)
+            features_encoded = features_encoded.reindex(columns=feature_columns, fill_value=0)
 
-    # Save predictions to the output JSON file
-    output_path = "../output/labels.json"
+            try:
+                predicted_label = model.predict(features_encoded)[0]
+                predictions[filename] = int(predicted_label)
+                print(f"Prediction for {filename}: {predicted_label}")
+            except Exception as e:
+                print(f"Error during prediction for {filename}: {e}")
+                continue
+
     save_json(predictions, output_path)
     print(f"Classification complete. Predictions saved to {output_path}")
 
 if __name__ == "__main__":
     main()
-

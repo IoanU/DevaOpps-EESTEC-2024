@@ -1,0 +1,42 @@
+{
+    "winlog": {
+        "task": "Registry",
+        "event_id": "4657",
+        "keywords": [
+            "Audit Success"
+        ],
+        "provider_guid": "{54849625-5478-4994-a5ba-3e3b0328c30d}",
+        "channel": "Security",
+        "api": "wineventlog",
+        "event_data": {
+            "ProcessName": "C:\\Windows\\System32\\wevtutil.exe",
+            "OldValue": "0x8000000000000000",
+            "NewValueType": "%%1883",
+            "OldValueType": "%%1883",
+            "ObjectValueName": "MatchAnyKeyword",
+            "SubjectLogonId": "0x3e7",
+            "ObjectName": "\\REGISTRY\\MACHINE\\SYSTEM\\ControlSet001\\Control\\WMI\\Autologger\\EventLog-Application\\{753dc014-8b03-40d0-9ea9-1af6b3084e0a}",
+            "SubjectUserName": "ws2$",
+            "HandleId": "0x1f8",
+            "SubjectDomainName": "MELD",
+            "NewValue": "0x0",
+            "ProcessId": "0xf30",
+            "OperationType": "%%1905",
+            "SubjectUserSid": "S-1-5-18"
+        },
+        "provider_name": "Microsoft-Windows-Security-Auditing",
+        "opcode": "Info"
+    },
+    "log": {
+        "level": "information"
+    },
+    "message": "A registry value was modified.\n\nSubject:\n\tSecurity ID:\t\tS-1-5-18\n\tAccount Name:\t\tws2$\n\tAccount Domain:\t\tMELD\n\tLogon ID:\t\t0x3E7\n\nObject:\n\tObject Name:\t\t\\REGISTRY\\MACHINE\\SYSTEM\\ControlSet001\\Control\\WMI\\Autologger\\EventLog-Application\\{753dc014-8b03-40d0-9ea9-1af6b3084e0a}\n\tObject Value Name:\tMatchAnyKeyword\n\tHandle ID:\t\t0x1f8\n\tOperation Type:\t\tExisting registry value modified\n\nProcess Information:\n\tProcess ID:\t\t0xf30\n\tProcess Name:\t\tC:\\Windows\\System32\\wevtutil.exe\n\nChange Information:\n\tOld Value Type:\t\tREG_QWORD\n\tOld Value:\t\t0x8000000000000000\n\tNew Value Type:\t\tREG_QWORD\n\tNew Value:\t\t0x0\n",
+    "event": {
+        "code": "4657",
+        "provider": "Microsoft-Windows-Security-Auditing",
+        "kind": "event",
+        "action": "Registry",
+        "outcome": "success"
+    },
+    "label": 0
+}
