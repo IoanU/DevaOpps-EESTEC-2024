@@ -12,6 +12,10 @@ def main():
 
     df = pd.read_csv(data_path)
 
+    for col in df.columns:
+        if df[col].apply(lambda x: isinstance(x, list)).any():
+            df = df.explode(col)
+
     X = pd.get_dummies(df.drop(columns=["label"]), drop_first=True)
     y = df["label"]
 
