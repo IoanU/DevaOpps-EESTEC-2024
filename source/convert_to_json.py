@@ -1,30 +1,28 @@
 import os
 import json
 from scapy.all import rdpcap
-from scapy.layers.inet import TCP
 from pathlib import Path
+from scapy.layers.inet import IP, TCP
 
-def extract_tcp_payload_to_json(pcap_path, output_json_path):
-    
-    # Extrage payload-ul TCP din fișierele .pcap și le salvează într-un fișier JSON.
-    
-    packets = rdpcap(pcap_path)
-    tcp_payloads = []
+def pcap_to_json(pcap_file):
+    # Read packets from the pcap file
+    packets = rdpcap(pcap_file)
+    tcp_streams = {}
 
-    # Parcurge fiecare pachet și extrage payload-ul TCP
     for packet in packets:
-        if packet.haslayer(TCP) and packet[TCP].payload:
-            payload_bytes = bytes(packet[TCP].payload)
-            try:
-                payload_text = payload_bytes.decode("utf-8")
-                tcp_payloads.append(payload_text)
-            except UnicodeDecodeError:
-                # Ignoră payload-urile care nu sunt în format text
-                continue
+        if IP in packet and TCP in packet and packet[TCP].payload:
+            connection_id = (packet[IP].src, packet[IP].dst, packet[TCP].sport, packet[TCP].dport)
+            tcp_streams.setdefault(connection_id, b"").extend(bytes(packet[TCP].payload))
 
-    # Salvează payload-urile într-un fișier JSON
-    with open(output_json_path, 'w', encoding='utf-8') as f:
-        json.dump(tcp_payloads, f, ensure_ascii=False, indent=4)
+    json_data = []
+    for stream_data in tcp_streams.values():
+        try:
+            data = json.loads(stream_data.decode('utf-8'))
+            json_data.append(data)
+        except (json.JSONDecodeError, UnicodeDecodeError):
+            continue  # Skip invalid JSON streams
+
+    return json_data if json_data else None
 
 def process_pcap_files(input_dir):
     
@@ -32,7 +30,7 @@ def process_pcap_files(input_dir):
 
     for filename in os.listdir(input_dir):
         file_path = Path(input_dir) / filename
-        if not filename.endswith(".pcap") and filename != "train_features.csv":
+        if not filename.endswith(".pcap"):
             new_filename = f"{filename}.pcap"
             new_file_path = file_path.with_name(new_filename)
             # Redenumește fișierul pentru a adăuga extensia .pcap
@@ -43,8 +41,8 @@ def process_pcap_files(input_dir):
             pcap_path = os.path.join(input_dir, filename)
             json_path = os.path.join(input_dir, f"{os.path.splitext(filename)[0]}.json")
 
-            # Extrage payload-ul și salvează în JSON
-            extract_tcp_payload_to_json(pcap_path, json_path)
+            # Extrage payload-ul si salveaza in json_path
+            json_path = pcap_to_json(pcap_path)
 
             # Șterge fișierul .pcap inițial
             os.remove(pcap_path)
