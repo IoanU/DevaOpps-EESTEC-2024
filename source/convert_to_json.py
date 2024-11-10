@@ -4,6 +4,11 @@ from scapy.all import rdpcap
 from pathlib import Path
 from scapy.layers.inet import IP, TCP
 
+def save_json_data(json_data, output_file):
+    with open(output_file, 'w') as f:
+        json.dump(json_data, f, indent=4)
+    print(f"Data saved to {output_file}")
+
 def pcap_to_json(pcap_file):
     # Read packets from the pcap file
     packets = rdpcap(pcap_file)
@@ -42,7 +47,7 @@ def process_pcap_files(input_dir):
             json_path = os.path.join(input_dir, f"{os.path.splitext(filename)[0]}.json")
 
             # Extrage payload-ul si salveaza in json_path
-            json_path = pcap_to_json(pcap_path)
+            save_json_data(pcap_to_json(pcap_path), json_path)
 
             # Șterge fișierul .pcap inițial
             os.remove(pcap_path)
