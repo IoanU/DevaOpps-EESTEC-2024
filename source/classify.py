@@ -78,6 +78,9 @@ def main():
         if file_path.is_file() :
             features = extract_features(file_path)
             features_df = pd.DataFrame([features])
+            for col in features_df.columns:
+                if features_df[col].apply(lambda x: isinstance(x, list)).any():
+                    features_df = features_df.explode(col)
             features_encoded = pd.get_dummies(features_df).reindex(columns=feature_columns, fill_value=0)
             try:
                 predicted_label = model.predict(features_encoded)[0]

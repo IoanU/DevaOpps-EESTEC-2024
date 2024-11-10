@@ -32,7 +32,7 @@ def process_pcap_files(input_dir):
 
     for filename in os.listdir(input_dir):
         file_path = Path(input_dir) / filename
-        if not filename.endswith(".pcap"):
+        if not filename.endswith(".pcap") and filename != "train_features.csv":
             new_filename = f"{filename}.pcap"
             new_file_path = file_path.with_name(new_filename)
             # Redenumește fișierul pentru a adăuga extensia .pcap

@@ -5,12 +5,13 @@ from joblib import dump
 from pathlib import Path
 
 def main():
-    data_path = "/usr/src/app/InputData/train/train_features.csv"
+    data_path = Path("/usr/src/app/InputData/train/train_features.csv")
     model_dir = Path("/usr/src/app/source/model")
     model_path = model_dir / "trained_model.pkl"
     columns_path = model_dir / "feature_columns.pkl"
 
     df = pd.read_csv(data_path)
+
     X = pd.get_dummies(df.drop(columns=["label"]), drop_first=True)
     y = df["label"]
 
