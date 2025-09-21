@@ -1,4 +1,51 @@
+# Python
 __pycache__/
-*.pyc
-output/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
 
+# Virtual environments
+venv/
+.env/
+.venv/
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+
+# Logs and data
+*.log
+*.csv
+*.json
+*.dat
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Build / Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+
+# Model artifacts
+*.pkl
+*.h5
+*.joblib
+
+# Custom project folders
+DataFolder/
+InputData/

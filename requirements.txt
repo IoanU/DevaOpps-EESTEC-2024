@@ -1,0 +1,19 @@
+# Core scientific libraries
+numpy
+pandas
+scipy
+scikit-learn
+
+# Serialization and model handling
+joblib
+threadpoolctl
+
+# Networking and packet processing
+dpkt
+scapy
+
+# Date and timezone utilities
+python-dateutil
+pytz
+tzdata
+six
