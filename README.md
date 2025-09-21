@@ -33,7 +33,7 @@ DevaOpps-main/
 │   ├── ceva.zip             # Archived resources
 │   └── model/               # Saved ML artifacts
 │       ├── feature_columns.pkl
-│       └── trained_model.pkl
+└       └── trained_model.pkl
 ```
 
 ---
