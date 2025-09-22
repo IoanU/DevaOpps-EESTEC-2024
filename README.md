@@ -1,4 +1,4 @@
-# DevaOpps 🔥
+# DevaOpps
 
 DevaOpps is a machine learning–powered project designed for **data classification and feature extraction**.  
 It provides utilities to preprocess input data, train a model, and classify new samples using a saved pipeline.  
